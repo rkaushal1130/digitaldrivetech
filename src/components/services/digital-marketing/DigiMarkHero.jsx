@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import Container from '../../ui/Container';
 import Button from '../../ui/Button';
 import { Target, TrendingUp, Users, Award, DollarSign, Settings, ArrowRight } from 'lucide-react';
-import logoImage from '../../../assets/icons/logo.png';
 import digiMarkHeroImg from '../../../assets/images/services-new-addons/Digital Marketing (2).webp';
 import './DigiMarkHero.css';
 
@@ -25,15 +24,6 @@ export default function DigiMarkHero() {
       <Container>
         <div className="digimark-hero-grid">
           <div className="digimark-hero-content">
-            <div className="digimark-brand-badge">
-              <img src={logoImage} alt="Digital Drive Resource Tech" className="digimark-brand-logo" />
-              <div className="digimark-brand-text">
-                <span className="digimark-brand-name">DIGITAL DRIVE</span>
-                <span className="digimark-brand-sub">RESOURCE TECH PRIVATE LIMITED</span>
-                <span className="digimark-brand-slogan">Driving Digital Innovation</span>
-              </div>
-            </div>
-
             <h1 className="digimark-main-title">
               DIGITAL <span>MARKETING</span>
             </h1>
