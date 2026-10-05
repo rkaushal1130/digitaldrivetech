@@ -1,0 +1,180 @@
+.digimark-services-section {
+  padding: 70px 0 60px;
+  position: relative;
+  background: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.12), transparent 60%);
+}
+
+.digimark-services-header {
+  text-align: center;
+  max-width: 820px;
+  margin: 0 auto 50px;
+}
+
+.digimark-services-tag {
+  display: inline-block;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #60a5fa;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.digimark-services-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+
+.digimark-services-subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.7;
+}
+
+.digimark-services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.digimark-service-card {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 20px;
+  padding: 30px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.digimark-service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2563eb, #60a5fa);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.digimark-service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(59, 130, 246, 0.55);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 25px rgba(37, 99, 235, 0.2);
+}
+
+.digimark-service-card:hover::before {
+  opacity: 1;
+}
+
+.digimark-service-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.digimark-service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.25), rgba(59, 130, 246, 0.1));
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #60a5fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.digimark-service-card:hover .digimark-service-icon {
+  background: #2563eb;
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.digimark-service-num {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: rgba(148, 163, 184, 0.3);
+  letter-spacing: 1px;
+}
+
+.digimark-service-name {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.35;
+}
+
+.digimark-service-desc {
+  font-size: 0.92rem;
+  color: #94a3b8;
+  line-height: 1.65;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+.digimark-service-action {
+  margin-top: auto;
+}
+
+.digimark-explore-btn {
+  width: 100%;
+  padding: 10px 16px !important;
+  font-size: 0.9rem !important;
+  justify-content: center;
+  display: inline-flex;
+  align-items: center;
+  border-color: rgba(59, 130, 246, 0.4) !important;
+  color: #e2e8f0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.digimark-explore-btn:hover {
+  background: rgba(37, 99, 235, 0.25) !important;
+  border-color: #3b82f6 !important;
+  color: #ffffff !important;
+  transform: none !important;
+}
+
+@media (max-width: 1200px) {
+  .digimark-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .digimark-services-section {
+    padding: 50px 0 40px;
+  }
+
+  .digimark-services-title {
+    font-size: 1.85rem;
+  }
+
+  .digimark-services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .digimark-service-card {
+    padding: 24px 20px;
+  }
+}

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import DigiMarkHero from '../components/services/digital-marketing/DigiMarkHero';
+import DigiMarkServicesList from '../components/services/digital-marketing/DigiMarkServicesList';
 import DigiMarkTechStack from '../components/services/digital-marketing/DigiMarkTechStack';
 import DigiMarkProcess from '../components/services/digital-marketing/DigiMarkProcess';
 import DigiMarkWhyChoose from '../components/services/digital-marketing/DigiMarkWhyChoose';
@@ -14,6 +15,7 @@ export default function DigitalMarketing() {
   return (
     <div className="digital-marketing-page">
       <DigiMarkHero />
+      <DigiMarkServicesList />
       <DigiMarkTechStack />
       <DigiMarkProcess />
       <DigiMarkWhyChoose />
