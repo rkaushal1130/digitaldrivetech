@@ -1,0 +1,285 @@
+/* TECHNOLOGIES & TESTIMONIALS SECTION - ABOUT PAGE */
+.tech-testimonials-section {
+  background: transparent;
+  padding: 60px 0;
+}
+
+.tech-testimonials-wrapper {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* PANELS */
+.tech-panel,
+.testimonials-panel {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 32px;
+}
+
+.section-tag {
+  color: #60a5fa;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.section-heading {
+  margin: 0 0 18px;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  color: #f1f5f9;
+  margin-bottom: 50px;
+  font-weight: 800;
+}
+
+/* TECHNOLOGIES GRID */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  row-gap: 24px;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+  transform: translateY(-6px);
+}
+
+.tech-logo {
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #60a5fa;
+  transition: all 0.3s ease;
+}
+
+.tech-item:hover .tech-logo {
+  transform: scale(1.1);
+}
+
+.tech-name {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-align: center;
+  line-height: 1.1;
+}
+
+/* TESTIMONIALS GRID - ABOUT PAGE SPECIFIC */
+.tech-testimonials-section .testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.tech-testimonials-section .testimonial {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.35s ease;
+}
+
+.tech-testimonials-section .testimonial:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(37, 99, 235, 0.3);
+}
+
+.tech-testimonials-section .testimonial-content {
+  flex: 1;
+}
+
+.tech-testimonials-section .stars {
+  color: #f59e0b;
+  letter-spacing: 1px;
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.tech-testimonials-section .testimonial-quote {
+  margin: 0;
+  color: #cbd5e1;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.tech-testimonials-section .testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #1e293b;
+}
+
+.tech-testimonials-section .client-avatar-initials {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(74, 108, 247, 0.2), rgba(37, 99, 235, 0.3));
+  border: 2px solid rgba(74, 108, 247, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #6d9fff;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.tech-testimonials-section .client-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tech-testimonials-section .client-name {
+  display: block;
+  font-size: 0.85rem;
+  color: #f1f5f9;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tech-testimonials-section .client-role {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1180px) {
+  .tech-testimonials-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .tech-testimonials-section .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-testimonials-section {
+    padding: 40px 0;
+  }
+
+  .tech-panel,
+  .testimonials-panel {
+    padding: 20px;
+    background: #07101d;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .tech-item {
+    padding: 10px;
+  }
+
+  .tech-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .tech-name {
+    font-size: 0.75rem;
+  }
+
+  .tech-testimonials-section .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-testimonials-section .testimonial {
+    padding: 14px;
+  }
+
+  .tech-testimonials-section .testimonial-quote {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-testimonials-section {
+    padding: 30px 0;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .tech-logo {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .tech-name {
+    font-size: 0.7rem;
+  }
+
+  .tech-testimonials-section .testimonial {
+    padding: 12px;
+  }
+
+  .tech-testimonials-section .client-avatar {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tech-testimonials-section .client-name {
+    font-size: 0.8rem;
+  }
+
+  .tech-testimonials-section .client-role {
+    font-size: 0.7rem;
+  }
+}

@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #020617;
+    color: white;
+    overflow-x: hidden;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-image:
+        radial-gradient(circle at top right, rgba(37, 99, 235, 0.25), transparent 35%),
+        radial-gradient(circle at bottom left, rgba(37, 99, 235, 0.15), transparent 30%);
+    padding-top: 89px;
+}
+
+.nav-spacer {
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    body {
+        padding-top: 134px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 124px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 99px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    width: 100%;
+    padding: 60px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+}

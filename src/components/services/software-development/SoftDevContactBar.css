@@ -1,0 +1,114 @@
+.softdev-contact-section {
+  padding: 0 0 80px;
+}
+
+.softdev-contact-bar {
+  background: #020617;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 20px;
+  padding: 24px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(37, 99, 235, 0.2);
+}
+
+.softdev-contact-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.softdev-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.softdev-contact-item:hover {
+  transform: translateY(-2px);
+}
+
+.softdev-contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
+}
+
+.softdev-contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.softdev-contact-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.softdev-contact-value {
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.softdev-consult-btn {
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+}
+
+.softdev-consult-btn:hover {
+  background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+}
+
+@media (max-width: 992px) {
+  .softdev-contact-bar {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .softdev-contact-grid {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .softdev-contact-cta {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .softdev-contact-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .softdev-contact-bar {
+    padding: 24px 20px;
+  }
+}

@@ -1,0 +1,136 @@
+.mobiledev-tech-section {
+  padding: 30px 0 70px;
+}
+
+.mobiledev-tech-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  color: #0f172a;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.mobiledev-tech-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.mobiledev-tech-header h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.mobiledev-tech-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.mobiledev-tech-columns {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.mobiledev-tech-column {
+  border-right: 1px dashed #cbd5e1;
+  padding-right: 12px;
+}
+
+.mobiledev-tech-column:last-child {
+  border-right: none;
+  padding-right: 0;
+}
+
+.mobiledev-tech-cat-header {
+  border-bottom: 2px solid #1e3a8a;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.mobiledev-tech-cat-title {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  letter-spacing: 0.8px;
+}
+
+.mobiledev-tech-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobiledev-tech-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.mobiledev-tech-item:hover {
+  background: #f1f5f9;
+}
+
+.mobiledev-tech-icon-box {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mobiledev-tech-logo-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.mobiledev-tech-icon-box i {
+  font-size: 1.15rem;
+  color: #1e3a8a;
+}
+
+.mobiledev-tech-name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+@media (max-width: 1100px) {
+  .mobiledev-tech-columns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .mobiledev-tech-column {
+    border-right: none;
+    border-bottom: 1px dashed #cbd5e1;
+    padding-bottom: 20px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .mobiledev-tech-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 440px) {
+  .mobiledev-tech-columns {
+    grid-template-columns: 1fr;
+  }
+}

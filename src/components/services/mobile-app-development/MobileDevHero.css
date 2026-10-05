@@ -1,0 +1,377 @@
+.mobiledev-hero {
+  position: relative;
+  padding: 80px 0 60px;
+  overflow: hidden;
+  background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.15), transparent 45%),
+              radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.12), transparent 40%);
+}
+
+.mobiledev-hero-bg-glow {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.mobiledev-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.mobiledev-brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  padding: 12px 20px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  backdrop-filter: blur(10px);
+  width: fit-content;
+}
+
+.mobiledev-brand-logo {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+}
+
+.mobiledev-brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobiledev-brand-name {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+
+.mobiledev-brand-sub {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.mobiledev-brand-slogan {
+  font-size: 0.75rem;
+  color: #3b82f6;
+  font-weight: 600;
+  font-style: italic;
+  margin-top: 2px;
+}
+
+.mobiledev-main-title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin-bottom: 12px;
+}
+
+.mobiledev-main-title span {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.mobiledev-tagline {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #60a5fa;
+  margin-bottom: 16px;
+  letter-spacing: -0.2px;
+}
+
+.mobiledev-description {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 28px;
+  max-width: 620px;
+}
+
+.mobiledev-pills-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.mobiledev-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(30, 41, 59, 0.7);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+
+.mobiledev-pill:hover {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: #3b82f6;
+  transform: translateY(-2px);
+}
+
+.mobiledev-pill-icon {
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+}
+
+.mobiledev-pill-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #e2e8f0;
+}
+
+.mobiledev-hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* HERO VISUAL & MOCKUP */
+.mobiledev-hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobiledev-glow-sphere {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.45) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(55px);
+  z-index: 1;
+}
+
+.mobiledev-hero-image-container {
+  position: relative;
+  z-index: 2;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(37, 99, 235, 0.3);
+  max-width: 520px;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #0f172a;
+}
+
+.mobiledev-hero-image-container:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 45px rgba(37, 99, 235, 0.45);
+  border-color: rgba(59, 130, 246, 0.6);
+}
+
+.mobiledev-hero-right-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.mobiledev-phone-notch {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 18px;
+  background: #020617;
+  border-radius: 12px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.notch-camera {
+  width: 8px;
+  height: 8px;
+  background: #1e293b;
+  border-radius: 50%;
+}
+
+.notch-speaker {
+  width: 24px;
+  height: 4px;
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+.mobiledev-phone-screen {
+  background: #020617;
+  border-radius: 26px;
+  height: 100%;
+  padding: 32px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobiledev-app-header {
+  margin-top: 6px;
+}
+
+.user-greeting span {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: block;
+}
+
+.user-greeting small {
+  font-size: 0.65rem;
+  color: #94a3b8;
+}
+
+.app-search-bar {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-top: 8px;
+}
+
+.mobiledev-app-card {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+  border-radius: 12px;
+  padding: 14px;
+  color: #ffffff;
+}
+
+.mobiledev-app-card h3 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.app-start-btn {
+  background: #ffffff;
+  color: #1e3a8a;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.mobiledev-app-categories {
+  display: flex;
+  gap: 6px;
+  overflow-x: auto;
+}
+
+.cat-pill {
+  background: #0f172a;
+  color: #94a3b8;
+  font-size: 0.62rem;
+  padding: 3px 8px;
+  border-radius: 6px;
+
+  white-space: nowrap;
+}
+
+.cat-pill.active {
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.mobiledev-app-services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.service-row-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #0f172a;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.icon-box-blue {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: rgba(37, 99, 235, 0.2);
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-box-green {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-row-text strong {
+  font-size: 0.72rem;
+  color: #ffffff;
+  display: block;
+}
+
+.service-row-text small {
+  font-size: 0.6rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 992px) {
+  .mobiledev-hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mobiledev-main-title {
+    font-size: 2.8rem;
+  }
+
+  .mobiledev-floating-badges-left,
+  .mobiledev-floating-badges-right {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .mobiledev-main-title {
+    font-size: 2.2rem;
+  }
+
+  .mobiledev-tagline {
+    font-size: 1.1rem;
+  }
+}

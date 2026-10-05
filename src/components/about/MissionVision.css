@@ -1,0 +1,142 @@
+/* MISSION & VISION SECTION */
+.mission-vision-section {
+  background: transparent;
+  padding: 60px 0;
+  border-top: none;
+}
+
+.cards-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 20px;
+}
+
+.soft-card {
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 24px;
+  transition: all 0.3s ease;
+}
+
+.soft-card:hover {
+  border-color: #3b82f6;
+}
+
+.soft-card.green {
+  background: transparent;
+}
+
+.soft-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.1);
+  border: 2px solid #3b82f6;
+  display: grid;
+  place-items: center;
+  font-size: 2rem;
+  color: #60a5fa;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.15);
+  flex: 0 0 auto;
+  transition: all 0.3s ease;
+}
+
+.soft-card:hover .soft-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 24px rgba(37, 99, 235, 0.4);
+}
+
+.soft-card.green .soft-icon {
+  border-color: #10b981;
+  color: #34d399;
+}
+
+.soft-card.green:hover .soft-icon {
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.4);
+}
+
+.soft-card .section-tag {
+  margin-bottom: 8px;
+  color: #60a5fa;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  display: block;
+}
+
+.soft-card .section-tag.green-tag {
+  color: #10b981;
+}
+
+.soft-card h3 {
+  margin: 0 0 12px;
+  font-size: 1.9rem;
+  line-height: 1.15;
+  color: #f1f5f9;
+  font-weight: 800;
+}
+
+.soft-card p {
+  margin: 0;
+  color: #94a3b8;
+  line-height: 1.75;
+  font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1180px) {
+  .cards-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .soft-card {
+    grid-template-columns: 70px 1fr;
+    padding: 32px;
+    gap: 20px;
+  }
+
+  .soft-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+  }
+
+  .soft-card h3 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mission-vision-section {
+    padding: 40px 0;
+  }
+
+  .soft-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 16px;
+    text-align: center;
+  }
+
+  .soft-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    font-size: 1.3rem;
+  }
+
+  .soft-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+  }
+
+  .soft-card p {
+    font-size: 0.95rem;
+  }
+}

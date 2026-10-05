@@ -1,0 +1,47 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+Code.gs
+.env
+.env.example
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Documentation files
+*.md
+!README.md
+*.txt
+
+# Specific files
+ABOUT_PAGE_CONVERSION_SUMMARY.md
+ABOUT_PAGE_INTEGRATION_COMPLETE.md
+FINAL_STATUS_SUMMARY.md
+IMPLEMENTATION_NOTES.md
+OUR_STORY_REDESIGN_SUMMARY.md
+OUR_STORY_WHITE_THEME_COMPLETE.md
+PROJECT_OVERVIEW.md
+REBRANDING_COMPLETE.md
+REBRANDING_DONE.md
+REBRANDING_STATUS.txt
+SMOOTH_WHITE_BG_COMPLETE.md
+TESTIMONIALS_COLOR_SCHEME_COMPLETE.md
+page2.html
+page3.html

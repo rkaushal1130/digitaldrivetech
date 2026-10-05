@@ -1,0 +1,143 @@
+.digimark-process-section {
+  padding: 30px 0 70px;
+}
+
+.digimark-process-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 44px 36px;
+  color: #0f172a;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.digimark-process-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.digimark-process-header h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.digimark-process-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.digimark-process-timeline {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  position: relative;
+}
+
+.digimark-process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.digimark-step-circle-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.digimark-step-circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #1e3a8a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 6px 16px rgba(30, 58, 138, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.digimark-process-step:hover .digimark-step-circle {
+  transform: scale(1.1);
+  background: #2563eb;
+}
+
+.digimark-step-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: #cbd5e1;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.digimark-step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digimark-step-number {
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  letter-spacing: 0.5px;
+}
+
+.digimark-step-title {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 4px 0 8px;
+  line-height: 1.3;
+}
+
+.digimark-step-desc {
+  font-size: 0.78rem;
+  color: #475569;
+  line-height: 1.45;
+}
+
+@media (max-width: 1100px) {
+  .digimark-process-timeline {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .digimark-step-line {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .digimark-process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .digimark-process-card {
+    padding: 32px 20px;
+  }
+}
+
+@media (max-width: 440px) {
+  .digimark-process-timeline {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,202 @@
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 40px;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.card {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card h3 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 24px;
+    font-weight: 900;
+    color: #f1f5f9;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.9;
+    margin-bottom: 24px;
+    font-size: 16px;
+}
+
+.section-tag {
+    color: #3b82f6;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 32px;
+}
+
+.features li {
+    margin-bottom: 16px;
+    color: #e2e8f0;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.features li i {
+    color: #2563eb;
+    margin-right: 12px;
+    font-size: 16px;
+}
+
+.about-image {
+    width: 100%;
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: none;
+    border-radius: 20px;
+    display: block;
+    box-shadow: 0 20px 60px rgba(37, 99, 235, 0.15), 0 0 80px rgba(37, 99, 235, 0.1);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-image img:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 30px 80px rgba(37, 99, 235, 0.25), 0 0 120px rgba(37, 99, 235, 0.15);
+}
+
+@media (max-width: 1024px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 70px 0;
+    }
+
+    .card h3 {
+        font-size: 40px;
+        line-height: 1.2;
+    }
+
+    .card p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .about-image img {
+        border-radius: 16px;
+        box-shadow: 0 15px 50px rgba(37, 99, 235, 0.12), 0 0 60px rgba(37, 99, 235, 0.08);
+    }
+
+    .about-image img:hover {
+        transform: translateY(-6px) scale(1.01);
+        box-shadow: 0 25px 70px rgba(37, 99, 235, 0.2), 0 0 100px rgba(37, 99, 235, 0.12);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 32px 0;
+    }
+
+    .card h3 {
+        font-size: 32px;
+        margin-bottom: 16px;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    .section-tag {
+        font-size: 11px;
+        margin-bottom: 12px;
+    }
+
+    .features li {
+        margin-bottom: 12px;
+        font-size: 14px;
+    }
+
+    .features li i {
+        margin-right: 10px;
+    }
+
+    .about-image img {
+        border-radius: 14px;
+        box-shadow: 0 12px 40px rgba(37, 99, 235, 0.1), 0 0 50px rgba(37, 99, 235, 0.06);
+    }
+
+    .about-image img:hover {
+        transform: translateY(-4px) scale(1.01);
+        box-shadow: 0 18px 60px rgba(37, 99, 235, 0.15), 0 0 80px rgba(37, 99, 235, 0.1);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 28px 0;
+    }
+
+    .card h3 {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+    }
+
+    .section-tag {
+        font-size: 10px;
+        margin-bottom: 10px;
+        letter-spacing: 1px;
+    }
+
+    .features {
+        margin-bottom: 20px;
+    }
+
+    .features li {
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .features li i {
+        margin-right: 8px;
+        font-size: 14px;
+    }
+
+    .about-image img {
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(37, 99, 235, 0.08), 0 0 40px rgba(37, 99, 235, 0.04);
+    }
+
+    .about-image img:hover {
+        transform: translateY(-3px) scale(1.01);
+        box-shadow: 0 12px 50px rgba(37, 99, 235, 0.12), 0 0 60px rgba(37, 99, 235, 0.08);
+    }
+}

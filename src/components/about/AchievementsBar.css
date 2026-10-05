@@ -1,0 +1,117 @@
+/* ACHIEVEMENTS SECTION */
+.achievements-section {
+  background: transparent;
+  padding: 42px 0;
+  margin-bottom: 40px;
+}
+
+.achievements-section p {
+  text-align: center;
+  margin: 0 0 30px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2563ff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.achievement-bar {
+  background: linear-gradient(180deg, #071127, #0b1731);
+  color: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 34px rgba(6, 15, 36, 0.22);
+}
+
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.achievement {
+  position: relative;
+  padding: 26px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.achievement:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20px;
+  bottom: 20px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.achievement .stat-icon {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: rgba(37, 99, 255, 0.12);
+  display: grid;
+  place-items: center;
+  color: #3f7bff;
+  font-size: 1.7rem;
+  font-weight: 800;
+  flex: 0 0 auto;
+}
+
+.achievement strong {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 4px;
+  font-weight: 800;
+}
+
+.achievement span {
+  color: #d2dbed;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1180px) {
+  .achievement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-section {
+    padding: 40px 0;
+  }
+
+  .achievement-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .achievement:not(:last-child)::after {
+    display: none;
+  }
+
+  .achievement {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 16px;
+    align-items: center;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 16px 0;
+    width: 100%;
+  }
+
+  .achievement strong {
+    font-size: 1.6rem;
+  }
+
+  .achievement .stat-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+  }
+}

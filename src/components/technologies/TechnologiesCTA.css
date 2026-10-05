@@ -1,0 +1,121 @@
+  .technologies-cta-wrap {
+    padding: 0 0 60px;
+    /* background: #020617; */
+    background: transparent;
+    padding: 42px 0 0;
+    border:none;
+  }
+
+  .technologies-cta {
+    background: linear-gradient(120deg, #0a1f4d, #0e2a66);
+    border-radius: 16px;
+    padding: 30px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .technologies-cta-left {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .technologies-cta-rocket {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+    font-size: 28px;
+  }
+
+  .technologies-cta h2 {
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  .technologies-cta p {
+    color: #b9c5dc;
+    font-size: 14.5px;
+    margin: 0;
+  }
+
+  .technologies-cta-right {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 1024px) {
+    .technologies-cta {
+      padding: 28px 32px;
+    }
+
+    .technologies-cta h2 {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .technologies-cta-wrap {
+      padding: 0 0 50px;
+    }
+
+    .technologies-cta {
+      padding: 24px 28px;
+    }
+
+    .technologies-cta h2 {
+      font-size: 20px;
+    }
+
+    .technologies-cta p {
+      font-size: 13.5px;
+    }
+
+    .technologies-cta-rocket {
+      width: 52px;
+      height: 52px;
+      font-size: 24px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .technologies-cta {
+      flex-direction: column;
+      text-align: center;
+      padding: 24px 20px;
+    }
+
+    .technologies-cta-left {
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .technologies-cta-right {
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .technologies-cta-right .btn {
+      width: 100%;
+    }
+
+    .technologies-cta h2 {
+      font-size: 18px;
+    }
+
+    .technologies-cta p {
+      font-size: 13px;
+    }
+  }

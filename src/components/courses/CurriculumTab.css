@@ -1,0 +1,59 @@
+.curriculum-tab {
+  padding: 4px 0;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.curriculum-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.curriculum-card:hover {
+  background: rgba(74, 108, 247, 0.06);
+  border-color: rgba(74, 108, 247, 0.15);
+  transform: translateX(4px);
+}
+
+.curriculum-card-number {
+  font-size: 13px;
+  font-weight: 700;
+  color: rgba(74, 108, 247, 0.4);
+  font-family: 'Hanken Grotesk', sans-serif;
+  min-width: 28px;
+}
+
+.curriculum-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(74, 108, 247, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a6cf7;
+  flex-shrink: 0;
+}
+
+.curriculum-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+@media (max-width: 480px) {
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+}

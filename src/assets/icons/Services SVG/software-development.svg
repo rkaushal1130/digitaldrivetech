@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- gear teeth -->
+  <g fill="#60a5fa">
+    <rect x="40" y="19" width="4" height="7" rx="2"/>
+    <rect x="40" y="19" width="4" height="7" rx="2" transform="rotate(45 42 40)"/>
+    <rect x="40" y="19" width="4" height="7" rx="2" transform="rotate(90 42 40)"/>
+    <rect x="40" y="19" width="4" height="7" rx="2" transform="rotate(135 42 40)"/>
+    <rect x="40" y="19" width="4" height="7" rx="2" transform="rotate(180 42 40)"/>
+    <rect x="40" y="19" width="4" height="7" rx="2" transform="rotate(225 42 40)"/>
+    <rect x="40" y="19" width="4" height="7" rx="2" transform="rotate(270 42 40)"/>
+    <rect x="40" y="19" width="4" height="7" rx="2" transform="rotate(315 42 40)"/>
+  </g>
+  <!-- gear body -->
+  <circle cx="42" cy="40" r="15" fill="#60a5fa"/>
+  <!-- gear hub -->
+  <circle cx="42" cy="40" r="7" fill="#1e293b"/>
+  <circle cx="42" cy="40" r="3" fill="#60a5fa"/>
+  <!-- wrench -->
+  <g transform="rotate(45 20 30)">
+    <rect x="15" y="8" width="10" height="34" rx="5" fill="#f59e0b"/>
+    <circle cx="20" cy="14" r="9" fill="#f59e0b"/>
+    <circle cx="20" cy="14" r="4" fill="#0f172a"/>
+  </g>
+</svg>

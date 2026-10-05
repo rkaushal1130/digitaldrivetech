@@ -1,0 +1,155 @@
+.uiux-about-section {
+  padding: 40px 0 70px;
+}
+
+.uiux-about-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 48px;
+  color: #0f172a;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.uiux-about-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.6fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.uiux-about-brand-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 2px solid #e2e8f0;
+  padding-right: 40px;
+}
+
+.uiux-about-logo-wrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.uiux-about-logo {
+  height: 90px;
+  width: auto;
+  margin-bottom: 16px;
+  object-fit: contain;
+}
+
+.uiux-about-company-name {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #5b21b6;
+  letter-spacing: 1px;
+  line-height: 1.1;
+  margin-bottom: 2px;
+}
+
+.uiux-about-company-sub {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #1e293b;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.uiux-about-divider {
+  width: 140px;
+  height: 2px;
+  background: #7c3aed;
+  margin: 8px 0;
+}
+
+.uiux-about-slogan {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #7c3aed;
+  font-style: italic;
+}
+
+.uiux-about-eyebrow {
+  color: #5b21b6;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.uiux-about-intro {
+  font-size: 0.95rem;
+  color: #334155;
+  line-height: 1.65;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+.uiux-about-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.uiux-about-feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.uiux-about-feature-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #7c3aed;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+}
+
+.uiux-about-feature-text h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.uiux-about-feature-text p {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+  .uiux-about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .uiux-about-brand-col {
+    border-right: none;
+    border-bottom: 2px solid #e2e8f0;
+    padding-right: 0;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 640px) {
+  .uiux-about-card {
+    padding: 28px 20px;
+  }
+
+  .uiux-about-features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .uiux-about-eyebrow {
+    font-size: 1.15rem;
+  }
+}

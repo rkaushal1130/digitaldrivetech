@@ -1,0 +1,152 @@
+/* OUR STORY SECTION */
+.our-story-section {
+  background: transparent;
+  padding: 70px 0;
+  border: none;
+  border-top: none;
+}
+
+.grid-2 {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.35fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.story-copy .section-tag {
+  color: #60a5fa;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
+}
+
+.story-copy .section-title {
+  margin: 0 0 16px;
+  font-size: 2.6rem;
+  line-height: 1.05;
+  color: #f1f5f9;
+  font-weight: 800;
+}
+
+.section-desc {
+  margin: 0;
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.story-paragraph {
+  margin-top: 18px !important;
+}
+
+.story-copy button {
+  margin-top: 28px;
+}
+
+/* TIMELINE */
+.story-line {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 35px;
+  align-items: start;
+}
+
+.milestone {
+  text-align: center;
+  position: relative;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.milestone:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  right: -22px;
+  top: 35px;
+  color: #3b82f6;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.mile-icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  display: grid;
+  place-items: center;
+  color: #60a5fa;
+  font-size: 2rem;
+}
+
+.milestone:hover .mile-icon {
+  border-color: #3b82f6;
+  background: rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 24px rgba(59, 130, 246, 0.4);
+}
+
+.milestone .year {
+  display: block;
+  color: #60a5fa;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.milestone h4 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+  color: #f1f5f9;
+  font-weight: 700;
+}
+
+.milestone p {
+  margin: 0;
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 1180px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .story-line {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .milestone::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .story-line {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .milestone::after {
+    display: none;
+  }
+
+  .story-copy .section-title {
+    font-size: 2rem;
+  }
+
+  .mile-icon {
+    width: 75px;
+    height: 75px;
+    font-size: 1.6rem;
+  }
+}

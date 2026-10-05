@@ -1,0 +1,113 @@
+.digimark-tech-section {
+  padding: 30px 0 70px;
+}
+
+.digimark-tech-card {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 40px;
+  color: #0f172a;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.digimark-tech-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.digimark-tech-header h2 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: #1e3a8a;
+  letter-spacing: 1.5px;
+  position: relative;
+  display: inline-block;
+}
+
+.digimark-tech-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2563eb;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+.digimark-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.digimark-tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.digimark-tech-item:hover {
+  background: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.1);
+}
+
+.digimark-tech-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+
+.digimark-tech-item:hover .digimark-tech-icon-box {
+  background: #2563eb;
+}
+
+.digimark-tech-icon-box i {
+  font-size: 1.5rem;
+  color: #2563eb;
+  transition: all 0.3s ease;
+}
+
+.digimark-tech-item:hover .digimark-tech-icon-box i {
+  color: #ffffff;
+}
+
+.digimark-tech-name {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+@media (max-width: 992px) {
+  .digimark-tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .digimark-tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 440px) {
+  .digimark-tech-grid {
+    grid-template-columns: 1fr;
+  }
+}

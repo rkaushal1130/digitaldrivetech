@@ -1,0 +1,140 @@
+/* ============================
+   FLOATING STATS
+============================ */
+
+.floating-stats {
+    position: relative;
+    z-index: 20;
+
+    /* Add space after hero */
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    padding: 0 20px;
+}
+
+.stats-card {
+    max-width: 1280px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding: 28px 26px;
+    min-height: 130px;
+
+    border: none;
+    border-radius: 0;
+
+    transition: all .35s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(92,140,255,.35);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.25),
+        0 0 40px rgba(92,140,255,.25);
+}
+
+.stat-icon {
+    width: 72px;
+    height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: linear-gradient(135deg,#5b7cff,#7197ff);
+
+    color: white;
+    font-size: 28px;
+
+    flex-shrink: 0;
+
+    box-shadow:
+        0 10px 25px rgba(91,124,255,.45),
+        inset 0 1px 2px rgba(255,255,255,.25);
+}
+
+.stat-content {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.stat-content strong {
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+.stat-content span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #c6d4f7;
+    line-height: 1.3;
+}
+
+/* ============================
+   TABLET
+============================ */
+
+@media (max-width:1100px) {
+
+    .stats-card {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+}
+
+/* ============================
+   MOBILE
+============================ */
+
+@media (max-width:768px) {
+
+    .floating-stats {
+        margin-top: -45px;
+        margin-bottom: -45px;
+        padding: 0 16px;
+    }
+
+    .stats-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .stat-item {
+        min-height: 110px;
+        padding: 22px;
+    }
+
+    .stat-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 22px;
+    }
+
+    .stat-content strong {
+        font-size: 1.5rem;
+    }
+
+    .stat-content span {
+        font-size: .85rem;
+    }
+
+}

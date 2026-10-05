@@ -1,0 +1,139 @@
+.contact-hero {
+  /* background: linear-gradient(120deg, #020617, #0a1430 55%, #0f2557); */
+  padding: 50px 0px 40px ;
+  background: transparent;
+  color: white;
+   /* padding: 0px 0 50px 0;  */
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-hero-text {
+  flex: 1;
+}
+
+.contact-eyebrow {
+  color: #3b82f6;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.contact-hero-text h1 {
+  font-size: 50px;
+  line-height: 1.15;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.contact-hero-text h1 span {
+  color: #2563eb;
+}
+
+.contact-hero-text p {
+  color: #cbd5e1;
+  font-size: 18px;
+  max-width: 480px;
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.contact-hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.contact-hero-visual {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 280px;
+}
+
+.contact-glow {
+  position: absolute;
+  width: 400px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.3), transparent 70%);
+  filter: blur(60px);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-hero-inner {
+    flex-direction: column;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 40px;
+  }
+
+  .contact-hero-text p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-hero {
+    padding: 40px 0 50px;
+  }
+
+  .contact-hero-text h1 {
+    font-size: 32px;
+  }
+
+  .contact-hero-text p {
+    font-size: 15px;
+  }
+
+  .contact-hero-visual {
+    min-height: 220px;
+  }
+
+  .contact-bubble {
+    width: 90px;
+    height: 75px;
+    font-size: 32px;
+  }
+
+  .contact-bubble.mail {
+    width: 120px;
+    height: 90px;
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-hero-text h1 {
+    font-size: 28px;
+  }
+
+  .contact-hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-hero-btns button {
+    width: 100%;
+  }
+}

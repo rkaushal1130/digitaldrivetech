@@ -1,0 +1,139 @@
+.technologies-section {
+  background: transparent;
+  padding: 60px 0;
+}
+
+.technologies-sec-label {
+  text-align: center;
+  color: #3b82f6;
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 12.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.technologies-sec-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #f1f5f9;
+  margin-bottom: 14px;
+}
+
+.technologies-sec-sub {
+  text-align: center;
+  color: #cbd5e1;
+  font-size: 15px;
+  max-width: 560px;
+  margin: 0 auto 44px;
+  line-height: 1.7;
+}
+
+.technologies-tgrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 22px;
+}
+
+.technologies-tcard {
+  background: transparent;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 14px;
+  padding: 26px 16px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  transition: 0.25s;
+}
+
+.technologies-tcard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(59, 130, 246, 0.3);
+  background: rgba(59, 130, 246, 0.05);
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.technologies-badge {
+  width: 62px;
+  height: 62px;
+  border-radius: 14px;
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: 22px;
+}
+
+.technologies-tcard h3 {
+  font-size: 17px;
+  color: #f1f5f9;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.technologies-tcard p {
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .technologies-tgrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .technologies-section {
+    padding: 50px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .technologies-sec-title {
+    font-size: 28px;
+  }
+
+  .technologies-sec-sub {
+    font-size: 14px;
+    margin-bottom: 36px;
+  }
+
+  .technologies-tcard {
+    padding: 22px 14px;
+  }
+
+  .technologies-badge {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .technologies-tcard h3 {
+    font-size: 16px;
+  }
+
+  .technologies-tcard p {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 600px) {
+  .technologies-tgrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .technologies-section {
+    padding: 40px 0;
+  }
+
+  .technologies-sec-title {
+    font-size: 24px;
+  }
+
+  .technologies-tcard {
+    padding: 20px 12px;
+  }
+}

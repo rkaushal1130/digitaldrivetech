@@ -1,0 +1,1615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Drive - Industrial Training & Internship Program</title>
+    <meta name="description" content="Digital Drive Resource Tech - Industrial Training & Internship Program. Learn, Implement, Lead Your Future with live projects and industry expert guidance.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1a3fc7;
+            --primary-dark: #0f2a8a;
+            --primary-light: #4a6cf7;
+            --accent: #ff6b00;
+            --dark: #0a0e1a;
+            --dark-2: #111827;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --white: #ffffff;
+            --success: #10b981;
+            --star: #f59e0b;
+            --red: #ef4444;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
+            --radius: 8px;
+            --radius-lg: 12px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            padding: 0 0;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 65px;
+        }
+
+        .navbar-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .navbar-logo .logo-icon {
+            width: 38px;
+            height: 38px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .navbar-logo .logo-text {
+            line-height: 1.1;
+        }
+
+        .navbar-logo .logo-text .brand {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -0.3px;
+        }
+
+        .navbar-logo .logo-text .sub {
+            font-size: 8px;
+            font-weight: 500;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-menu {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .navbar-menu a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--gray-700);
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        .navbar-menu a:hover {
+            color: var(--primary);
+        }
+
+        .navbar-menu a.highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .navbar-menu .dropdown-arrow {
+            font-size: 10px;
+            margin-left: 3px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(26, 63, 199, 0.3);
+        }
+
+        .btn-outline {
+            background: var(--white);
+            color: var(--dark);
+            border: 2px solid var(--gray-300);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--dark);
+            border: 2px solid var(--gray-200);
+        }
+
+        .btn-blue {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .btn-blue:hover {
+            background: var(--primary-dark);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            position: relative;
+            background: var(--dark);
+            min-height: 440px;
+            overflow: hidden;
+        }
+
+        .hero-bg-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(10,14,26,0.92) 0%, rgba(10,14,26,0.75) 50%, rgba(10,14,26,0.2) 100%);
+            z-index: 1;
+        }
+
+        .hero-bg-image {
+            position: absolute;
+            inset: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500"><rect fill="%23111827" width="1200" height="500"/><circle cx="900" cy="200" r="300" fill="%231a2744" opacity="0.5"/><circle cx="1000" cy="300" r="200" fill="%231a3050" opacity="0.3"/></svg>') center/cover no-repeat;
+            z-index: 0;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            min-height: 440px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+
+        .hero-content {
+            max-width: 560px;
+        }
+
+        .hero-tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary-light);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: 44px;
+            font-weight: 900;
+            color: var(--white);
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, #4a6cf7, #6d9fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-desc {
+            font-size: 15px;
+            color: #b0b8c9;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 30px;
+            margin-bottom: 28px;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--white);
+            font-weight: 500;
+        }
+
+        .hero-feature .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .hero-feature .dot.blue {
+            background: var(--primary-light);
+        }
+
+        .hero-feature .dot.orange {
+            background: var(--accent);
+        }
+
+        .hero-feature .dot.green {
+            background: var(--success);
+        }
+
+        .hero-feature .dot.red {
+            background: var(--red);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 14px;
+        }
+
+        .hero-buttons .btn {
+            padding: 12px 26px;
+            font-size: 14px;
+        }
+
+        .hero-image-area {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 50%;
+            z-index: 0;
+        }
+
+        .hero-image-area::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(10,14,26,0.95) 0%, rgba(10,14,26,0.3) 60%, transparent 100%);
+            z-index: 1;
+        }
+
+        /* ===== SECTION STYLING ===== */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title .tag {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        /* ===== TRAINING DOMAINS ===== */
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+        }
+
+        .domain-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 24px 18px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .domain-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .domain-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .domain-icon {
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(135deg, #eef2ff, #dbe6ff);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+            font-size: 22px;
+            color: var(--primary);
+        }
+
+        .domain-card h3 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--dark);
+        }
+
+        .domain-card ul {
+            list-style: disc;
+            padding-left: 16px;
+        }
+
+        .domain-card ul li {
+            font-size: 12.5px;
+            color: var(--gray-700);
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+
+        /* ===== PROGRAM HIGHLIGHTS ===== */
+        .highlights {
+            background: linear-gradient(135deg, var(--dark) 0%, #151d30 100%);
+            padding: 50px 0;
+        }
+
+        .highlights .section-title .tag,
+        .highlights .section-title h2 {
+            color: var(--white);
+        }
+
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .highlight-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .highlight-icon {
+            width: 62px;
+            height: 62px;
+            border: 2px solid rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+
+        .highlight-icon:hover {
+            border-color: var(--primary-light);
+            background: rgba(74,108,247,0.15);
+            transform: scale(1.08);
+        }
+
+        .highlight-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            line-height: 1.4;
+        }
+
+        /* ===== INFO SECTION (Programs, Eligibility, Why Choose, Form) ===== */
+        .info-section {
+            padding: 50px 0;
+            background: var(--gray-100);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1.3fr;
+            gap: 24px;
+            align-items: start;
+        }
+
+        .info-col h3 {
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 18px;
+            color: var(--dark);
+        }
+
+        .program-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .program-item:last-child {
+            border-bottom: none;
+        }
+
+        .program-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #eef2ff, #dbe6ff);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .program-item span {
+            font-size: 13px;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        .eligibility-list li,
+        .why-list li {
+            font-size: 13px;
+            color: var(--gray-700);
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .eligibility-list li::before {
+            content: '•';
+            color: var(--primary);
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .why-list li i {
+            color: var(--primary);
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        /* ===== APPLICATION FORM ===== */
+        .apply-form-card {
+            background: var(--primary);
+            border-radius: var(--radius-lg);
+            padding: 28px 24px;
+            color: var(--white);
+        }
+
+        .apply-form-card h3 {
+            color: var(--white) !important;
+            font-size: 20px !important;
+            text-transform: none !important;
+            margin-bottom: 4px !important;
+        }
+
+        .apply-form-card .form-subtitle {
+            font-size: 13px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 18px;
+        }
+
+        .form-group {
+            margin-bottom: 10px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid rgba(255,255,255,0.2);
+            border-radius: 6px;
+            background: rgba(255,255,255,0.1);
+            color: var(--white);
+            font-size: 13px;
+            font-family: inherit;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255,255,255,0.6);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .form-group select {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            color: var(--dark);
+            background: var(--white);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 60px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background: var(--white);
+            color: var(--primary);
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            margin-top: 14px;
+        }
+
+        .btn-submit:hover {
+            background: var(--gray-100);
+            transform: translateY(-1px);
+        }
+
+        .btn-submit i {
+            font-size: 16px;
+        }
+
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 50px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-stars i {
+            color: var(--star);
+            font-size: 14px;
+        }
+
+        .testimonial-text {
+            font-size: 13px;
+            color: var(--gray-700);
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .author-avatar {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--primary-light), var(--primary));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .author-info .name {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .author-info .role {
+            font-size: 11px;
+            color: var(--gray-500);
+        }
+
+        /* ===== STATS ===== */
+        .stats {
+            background: var(--gray-100);
+            padding: 40px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .stat-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: var(--white);
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--dark);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--gray-500);
+            font-weight: 500;
+        }
+
+        /* ===== CONNECT ===== */
+        .connect {
+            background: var(--primary);
+            padding: 40px 0;
+            color: var(--white);
+        }
+
+        .connect .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        .connect-left h3 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .connect-left p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .connect-contacts {
+            display: flex;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .connect-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .connect-contact-item i {
+            font-size: 14px;
+        }
+
+        .connect-people {
+            display: flex;
+            gap: 30px;
+        }
+
+        .connect-person {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .person-avatar {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--white);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .person-info .p-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .person-info .p-role {
+            font-size: 11px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .person-info .p-phone {
+            font-size: 12px;
+            color: rgba(255,255,255,0.85);
+            margin-top: 2px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--dark);
+            color: rgba(255,255,255,0.75);
+            padding: 50px 0 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.3fr;
+            gap: 40px;
+            padding-bottom: 30px;
+        }
+
+        .footer-brand .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .footer-brand .footer-logo .f-logo-icon {
+            width: 36px;
+            height: 36px;
+            background: var(--primary);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .footer-brand .footer-logo .f-brand-name {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--white);
+        }
+
+        .footer-brand .footer-logo .f-brand-sub {
+            font-size: 8px;
+            color: var(--gray-500);
+            text-transform: uppercase;
+        }
+
+        .footer-brand p {
+            font-size: 13px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social a {
+            width: 34px;
+            height: 34px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--primary);
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            font-size: 13px;
+            color: rgba(255,255,255,0.65);
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-contact-info li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .footer-contact-info li i {
+            margin-top: 3px;
+            color: var(--primary-light);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 18px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-bottom p {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+            transition: color 0.2s;
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--white);
+        }
+
+        /* ===== MOBILE MENU ===== */
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 22px;
+            color: var(--dark);
+            cursor: pointer;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .domains-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .highlights-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
+            .info-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-toggle {
+                display: block;
+            }
+            .navbar-menu {
+                display: none;
+            }
+            .hero h1 {
+                font-size: 30px;
+            }
+            .hero-features {
+                grid-template-columns: 1fr;
+            }
+            .domains-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .highlights-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .connect .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .connect-contacts {
+                justify-content: center;
+            }
+            .connect-people {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+            .highlights-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#" class="navbar-logo">
+                <div class="logo-icon"><i class="fas fa-bolt"></i></div>
+                <div class="logo-text">
+                    <div class="brand">DIGITAL DRIVE</div>
+                    <div class="sub">Resource Tech Private Limited</div>
+                </div>
+            </a>
+            <div class="navbar-menu" id="navMenu">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#">Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                <a href="#">Portfolio</a>
+                <a href="#">Technologies</a>
+                <a href="#">Pricing</a>
+                <a href="#">Contact Us</a>
+                <a href="#" class="highlight">Internship &amp; Training</a>
+                <a href="#apply" class="btn btn-primary">Apply Now</a>
+            </div>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-image"></div>
+        <div class="hero-bg-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <p class="hero-tag">Industrial Training &amp; Internship Program</p>
+                <h1>Learn. Implement.<br><span class="gradient-text">Lead Your Future.</span></h1>
+                <p class="hero-desc">Gain practical skills by working on live projects and real-time scenarios under the guidance of industry experts.</p>
+                <div class="hero-features">
+                    <div class="hero-feature"><span class="dot blue"></span> Live Projects</div>
+                    <div class="hero-feature"><span class="dot green"></span> Placement Assistance</div>
+                    <div class="hero-feature"><span class="dot orange"></span> Industry Certificate</div>
+                    <div class="hero-feature"><span class="dot blue"></span> Expert Mentorship</div>
+                    <div class="hero-feature"><span class="dot red"></span> Internship Letter</div>
+                    <div class="hero-feature"><span class="dot green"></span> Resume Building Support</div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#apply" class="btn btn-blue">Apply Now <i class="fas fa-arrow-right"></i></a>
+                    <a href="#" class="btn btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.3);">Download Brochure <i class="fas fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TRAINING DOMAINS ===== -->
+    <section class="section" id="domains">
+        <div class="container">
+            <div class="section-title">
+                <p class="tag">Choose Your Career Path</p>
+                <h2>Our Training Domains</h2>
+            </div>
+            <div class="domains-grid">
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Digital Marketing</h3>
+                    <ul>
+                        <li>SEO</li>
+                        <li>Social Media Marketing</li>
+                        <li>Google Ads</li>
+                        <li>Content Marketing</li>
+                        <li>Lead Generation</li>
+                        <li>Email Marketing</li>
+                    </ul>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="fas fa-code"></i></div>
+                    <h3>Web Development</h3>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>WordPress</li>
+                        <li>Responsive Design</li>
+                        <li>Website Maintenance</li>
+                    </ul>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="fas fa-users"></i></div>
+                    <h3>HR &amp; Recruitment</h3>
+                    <ul>
+                        <li>Recruitment Process</li>
+                        <li>Resume Screening</li>
+                        <li>Interview Coordination</li>
+                        <li>Employee Documentation</li>
+                        <li>HR Policies</li>
+                    </ul>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Accounts &amp; Finance</h3>
+                    <ul>
+                        <li>Tally Prime</li>
+                        <li>GST Basics</li>
+                        <li>Accounting Entries</li>
+                        <li>Financial Reporting</li>
+                        <li>Bank Reconciliation</li>
+                    </ul>
+                </div>
+                <div class="domain-card">
+                    <div class="domain-icon"><i class="fas fa-robot"></i></div>
+                    <h3>AI &amp; Automation</h3>
+                    <ul>
+                        <li>ChatGPT</li>
+                        <li>AI Tools</li>
+                        <li>Business Automation</li>
+                        <li>Productivity Tools</li>
+                        <li>Workflow Automation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROGRAM HIGHLIGHTS ===== -->
+    <section class="highlights" id="highlights">
+        <div class="container">
+            <div class="section-title">
+                <p class="tag" style="color:rgba(255,255,255,0.6);">Program Highlights</p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-laptop-code"></i></div>
+                    <span class="highlight-label">Live Project<br>Training</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-industry"></i></div>
+                    <span class="highlight-label">Industry<br>Certificate</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-file-certificate"></i></div>
+                    <span class="highlight-label">Internship<br>Completion Letter</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <span class="highlight-label">Expert<br>Mentorship</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-handshake"></i></div>
+                    <span class="highlight-label">Placement<br>Assistance</span>
+                </div>
+                <div class="highlight-item">
+                    <div class="highlight-icon"><i class="fas fa-file-alt"></i></div>
+                    <span class="highlight-label">Resume Building<br>Support</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INFO SECTION ===== -->
+    <section class="info-section" id="info">
+        <div class="container">
+            <div class="info-grid">
+                <!-- Available Programs -->
+                <div class="info-col">
+                    <h3>Available Programs</h3>
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-calendar-alt"></i></div>
+                        <span>4 Weeks Internship</span>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-clock"></i></div>
+                        <span>6 Weeks Industrial Training</span>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-calendar-check"></i></div>
+                        <span>45 Days Industrial Training</span>
+                    </div>
+                    <div class="program-item">
+                        <div class="program-icon"><i class="fas fa-calendar"></i></div>
+                        <span>3 Months Internship Program</span>
+                    </div>
+                </div>
+
+                <!-- Eligibility -->
+                <div class="info-col">
+                    <h3>Eligibility</h3>
+                    <ul class="eligibility-list">
+                        <li>BBA</li>
+                        <li>MBA</li>
+                        <li>BCA</li>
+                        <li>MCA</li>
+                        <li>B.Tech</li>
+                        <li>Polytechnic Students</li>
+                        <li>Fresh Graduates</li>
+                    </ul>
+                </div>
+
+                <!-- Why Choose -->
+                <div class="info-col">
+                    <h3>Why Choose Digital Drive?</h3>
+                    <ul class="why-list">
+                        <li><i class="fas fa-check-circle"></i> Real Client Projects</li>
+                        <li><i class="fas fa-check-circle"></i> Practical Learning Approach</li>
+                        <li><i class="fas fa-check-circle"></i> Industry Expert Guidance</li>
+                        <li><i class="fas fa-check-circle"></i> Modern Tools &amp; Technologies</li>
+                        <li><i class="fas fa-check-circle"></i> Professional Work Environment</li>
+                        <li><i class="fas fa-check-circle"></i> Career Growth Opportunities</li>
+                    </ul>
+                </div>
+
+                <!-- Apply Now Form -->
+                <div class="info-col" id="apply">
+                    <div class="apply-form-card">
+                        <h3>APPLY NOW</h3>
+                        <p class="form-subtitle">Fill out the form and kickstart your career</p>
+                        <form id="applicationForm" onsubmit="event.preventDefault(); alert('Application Submitted Successfully!');">
+                            <div class="form-group">
+                                <input type="text" placeholder="Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="College / University Name">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" placeholder="Course / Stream">
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Mobile Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <select>
+                                    <option value="" disabled selected>Select Training Domain</option>
+                                    <option>Digital Marketing</option>
+                                    <option>Web Development</option>
+                                    <option>HR &amp; Recruitment</option>
+                                    <option>Accounts &amp; Finance</option>
+                                    <option>AI &amp; Automation</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <select>
+                                    <option value="" disabled selected>Select Duration</option>
+                                    <option>4 Weeks</option>
+                                    <option>6 Weeks</option>
+                                    <option>45 Days</option>
+                                    <option>3 Months</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Message (Optional)" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i> Submit Application
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <p class="tag">What Our Students Say</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"The training was amazing! I worked on live projects and learned practical skills that boosted my confidence."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PS</div>
+                        <div class="author-info">
+                            <div class="name">Priya Sharma</div>
+                            <div class="role">MBA Student</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Best place for industrial training. Mentors are very supportive and projects are very practical."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RV</div>
+                        <div class="author-info">
+                            <div class="name">Rahul Verma</div>
+                            <div class="role">BCA Student</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excellent environment and great learning experience. Helped me a lot in my career growth."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div class="author-info">
+                            <div class="name">Anjali Mehta</div>
+                            <div class="role">B.Tech Student</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS ===== -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div>
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Students Trained</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                    <div>
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Live Projects</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div>
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Expert Mentors</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fas fa-award"></i></div>
+                    <div>
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Practical Exposure</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONNECT ===== -->
+    <section class="connect" id="connect">
+        <div class="container">
+            <div class="connect-left">
+                <h3>CONNECT WITH US</h3>
+                <p>Have questions or need help? Reach out to us.<br>Our team will assist you.</p>
+                <div class="connect-contacts">
+                    <div class="connect-contact-item"><i class="fas fa-phone"></i> +91 98765 43210</div>
+                    <div class="connect-contact-item"><i class="fas fa-envelope"></i> training@digitaldriveresourcetech.com</div>
+                </div>
+            </div>
+            <div class="connect-people">
+                <div class="connect-person">
+                    <div class="person-avatar"><i class="fas fa-user"></i></div>
+                    <div class="person-info">
+                        <div class="p-name">Ravi Kumar</div>
+                        <div class="p-role">Training Coordinator</div>
+                        <div class="p-phone"><i class="fas fa-phone" style="font-size:10px;"></i> +91 98765 43210</div>
+                    </div>
+                </div>
+                <div class="connect-person">
+                    <div class="person-avatar"><i class="fas fa-user"></i></div>
+                    <div class="person-info">
+                        <div class="p-name">Neha Sharma</div>
+                        <div class="p-role">Student Counsellor</div>
+                        <div class="p-phone"><i class="fas fa-phone" style="font-size:10px;"></i> +91 87654 32109</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <div class="f-logo-icon"><i class="fas fa-bolt"></i></div>
+                        <div>
+                            <div class="f-brand-name">DIGITAL DRIVE</div>
+                            <div class="f-brand-sub">Resource Tech Private Limited</div>
+                        </div>
+                    </div>
+                    <p>We build digital solutions, websites, apps and software that help businesses grow and succeed online.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Blogging</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">Website Development</a></li>
+                        <li><a href="#">Mobile App Development</a></li>
+                        <li><a href="#">UI/UX Design</a></li>
+                        <li><a href="#">E-Commerce Solutions</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Software Development</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Us</h4>
+                    <ul class="footer-contact-info">
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> hello@digitaldriveresourcetech.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123, Tech Street, Ludhiana, Punjab - 141001, India</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Digital Drive Resource Tech Private Limited. All Rights Reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        mobileToggle.addEventListener('click', () => {
+            if (navMenu.style.display === 'flex') {
+                navMenu.style.display = 'none';
+            } else {
+                navMenu.style.display = 'flex';
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '65px';
+                navMenu.style.left = '0';
+                navMenu.style.right = '0';
+                navMenu.style.background = '#fff';
+                navMenu.style.padding = '20px';
+                navMenu.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+                navMenu.style.gap = '14px';
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.domain-card, .highlight-item, .testimonial-card, .stat-item').forEach(el => {
+            el.style.opacity = '0';
+            observer.observe(el);
+        });
+
+        // Animated counter for stats
+        function animateCounter(element, target, suffix = '') {
+            let current = 0;
+            const isPercent = target === 100;
+            const increment = Math.ceil(target / 40);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = current + suffix;
+            }, 30);
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(el => {
+                        const text = el.textContent;
+                        const num = parseInt(text);
+                        const suffix = text.replace(num, '');
+                        animateCounter(el, num, suffix);
+                    });
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        const statsSection = document.getElementById('stats');
+        if (statsSection) statsObserver.observe(statsSection);
+    </script>
+</body>
+</html>

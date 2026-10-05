@@ -1,0 +1,114 @@
+.uiux-contact-section {
+  padding: 0 0 80px;
+}
+
+.uiux-contact-bar {
+  background: #020617;
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 20px;
+  padding: 24px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(139, 92, 246, 0.2);
+}
+
+.uiux-contact-grid {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.uiux-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.uiux-contact-item:hover {
+  transform: translateY(-2px);
+}
+
+.uiux-contact-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #7c3aed;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+}
+
+.uiux-contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.uiux-contact-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.uiux-contact-value {
+  font-size: 0.95rem;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.uiux-consult-btn {
+  background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(124, 58, 237, 0.35);
+}
+
+.uiux-consult-btn:hover {
+  background: linear-gradient(135deg, #6d28d9 0%, #5b21b6 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.5);
+}
+
+@media (max-width: 992px) {
+  .uiux-contact-bar {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .uiux-contact-grid {
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .uiux-contact-cta {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .uiux-contact-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .uiux-contact-bar {
+    padding: 24px 20px;
+  }
+}

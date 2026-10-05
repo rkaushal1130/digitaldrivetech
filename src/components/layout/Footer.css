@@ -1,0 +1,355 @@
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.logo i {
+    color: #3b82f6;
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 0;
+}
+
+/* Footer Base Styles - Desktop (1024px+) */
+footer {
+    width: 100%;
+    padding: 70px 0 30px;
+    background: #020617;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.footer-grid h4 {
+    margin-bottom: 20px;
+    font-size: 26px;
+    color: #fff;
+}
+
+.footer-grid p,
+.footer-grid li {
+    color: #cbd5e1;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    list-style: none;
+    transition: all 0.3s ease;
+}
+
+.footer-grid ul {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-grid li[style*="cursor: pointer"] {
+    cursor: pointer;
+    padding: 4px 0;
+}
+
+.footer-grid li[style*="cursor: pointer"]:hover {
+    color: #3b82f6;
+    text-shadow: 0 0 10px rgba(59, 130, 246, 0.6), 0 0 20px rgba(59, 130, 246, 0.4);
+    transform: translateX(5px);
+}
+
+.socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.socials i,
+.socials a {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: inherit;
+    text-decoration: none;
+    font-size: inherit;
+}
+
+.socials i:hover,
+.socials a:hover {
+    background: #3b82f6;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    border-top: 1px solid #1e293b;
+    padding-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    color: #94a3b8;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Tablet: 768px to 1023px */
+@media (max-width: 1023px) and (min-width: 768px) {
+    footer {
+        padding: 60px 0 30px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 50px;
+        margin-bottom: 45px;
+    }
+
+    .footer-grid h4 {
+        font-size: 24px;
+        margin-bottom: 18px;
+    }
+
+    .footer-grid p,
+    .footer-grid li {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile: Below 768px - Complete Redesign */
+@media (max-width: 767px) {
+    footer {
+        padding: 50px 20px 24px;
+    }
+
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 36px;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    /* Logo Section - First */
+    .footer-grid > div:first-child {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo-image {
+        height: 55px;
+        margin-bottom: 16px;
+    }
+
+    .footer-grid > div:first-child p {
+        max-width: 320px;
+        margin: 0 auto 20px;
+        line-height: 1.7;
+        font-size: 15px;
+    }
+
+    /* Social Icons - Second */
+    .socials {
+        justify-content: center;
+        margin-top: 0;
+        gap: 18px;
+    }
+
+    .socials i {
+        width: 44px;
+        height: 44px;
+    }
+
+    /* Quick Links - Third */
+    .footer-grid > div:nth-child(2) {
+        order: 2;
+    }
+
+    /* Services - Fourth */
+    .footer-grid > div:nth-child(3) {
+        order: 3;
+    }
+
+    /* Contact - Fifth */
+    .footer-grid > div:nth-child(4) {
+        order: 4;
+    }
+
+    .footer-grid h4 {
+        font-size: 20px;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+
+    .footer-grid ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .footer-grid p,
+    .footer-grid li {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 8px;
+        text-align: center;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+    }
+
+    .footer-grid li[style*="cursor: pointer"] {
+        padding: 8px 12px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 280px;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    .footer-grid li[style*="cursor: pointer"]:hover {
+        background: rgba(59, 130, 246, 0.1);
+        transform: translateX(0);
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+        padding-top: 24px;
+    }
+
+    .footer-bottom p {
+        font-size: 14px;
+    }
+}
+
+/* Small Mobile: Below 480px */
+@media (max-width: 479px) {
+    footer {
+        padding: 45px 16px 20px;
+    }
+
+    .footer-grid {
+        gap: 32px;
+        margin-bottom: 36px;
+    }
+
+    .logo-image {
+        height: 50px;
+        margin-bottom: 14px;
+    }
+
+    .footer-grid > div:first-child p {
+        font-size: 14px;
+        max-width: 280px;
+        line-height: 1.65;
+    }
+
+    .socials {
+        gap: 16px;
+    }
+
+    .socials i {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-grid h4 {
+        font-size: 18px;
+        margin-bottom: 14px;
+    }
+
+    .footer-grid p,
+    .footer-grid li {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+    .footer-grid li[style*="cursor: pointer"] {
+        padding: 7px 10px;
+        max-width: 260px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+    }
+
+    .footer-bottom p {
+        font-size: 13px;
+    }
+}
+
+/* Extra Small Mobile: Below 375px */
+@media (max-width: 374px) {
+    footer {
+        padding: 40px 16px 18px;
+    }
+
+    .footer-grid {
+        gap: 28px;
+    }
+
+    .logo-image {
+        height: 45px;
+    }
+
+    .footer-grid > div:first-child p {
+        font-size: 13px;
+        max-width: 100%;
+    }
+
+    .socials {
+        gap: 14px;
+    }
+
+    .socials i {
+        width: 38px;
+        height: 38px;
+    }
+
+    .footer-grid h4 {
+        font-size: 17px;
+    }
+
+    .footer-grid p,
+    .footer-grid li {
+        font-size: 13px;
+    }
+
+    .footer-grid li[style*="cursor: pointer"] {
+        max-width: 100%;
+        padding: 6px 8px;
+    }
+
+    .footer-bottom p {
+        font-size: 12px;
+    }
+}

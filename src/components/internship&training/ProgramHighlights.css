@@ -1,0 +1,288 @@
+.highlights {
+  background: linear-gradient(180deg, #020617 0%, #07101d 50%, #0f172a 100%);
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.highlights::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(74, 108, 247, 0.55), transparent);
+}
+
+.highlights::after {
+  content: '';
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 68%);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.highlights .container {
+  position: relative;
+  z-index: 1;
+}
+
+.highlights .section-title {
+  margin-bottom: 42px;
+  text-align: center;
+}
+
+.highlights .section-title h2 {
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .highlights .section-title h2 {
+    font-size: 24px;
+  }
+}
+
+.highlights .section-title p {
+   font-size: 14px;
+  /* color: #6d9fff; */
+  /* background: rgba(74, 108, 247, 0.12); */
+  /* border: 1px solid rgba(74, 108, 247, 0.28); */
+}
+
+.highlights .section-title h2 {
+  color: #f8fafc;
+  margin-top: 14px;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.highlight-card {
+  min-height: 220px;
+  padding: 26px 18px;
+  background:
+    radial-gradient(circle at 50% 24%, rgba(59, 130, 246, 0.12), transparent 42%),
+    linear-gradient(135deg, rgba(7, 16, 29, 0.92), rgba(15, 23, 42, 0.72));
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 14px 38px rgba(2, 6, 23, 0.28);
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.highlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #3b82f6, #4a6cf7, transparent);
+  border-radius: 0 0 999px 999px;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.highlight-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: radial-gradient(circle at 50% 28%, rgba(74, 108, 247, 0.18), transparent 48%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.highlight-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(74, 108, 247, 0.75);
+  background:
+    radial-gradient(circle at 50% 24%, rgba(59, 130, 246, 0.2), transparent 46%),
+    linear-gradient(135deg, rgba(7, 16, 29, 0.98), rgba(30, 64, 120, 0.48));
+  box-shadow:
+    0 0 26px rgba(59, 130, 246, 0.35),
+    0 0 54px rgba(74, 108, 247, 0.22),
+    0 24px 46px rgba(2, 6, 23, 0.45),
+    inset 0 0 60px rgba(74, 108, 247, 0.05);
+}
+
+.highlight-card:hover::before {
+  transform: scaleX(1);
+}
+
+.highlight-card:hover::after {
+  opacity: 1;
+}
+
+.highlight-icon-wrapper {
+  width: 82px;
+  height: 82px;
+  background:
+    radial-gradient(circle, rgba(109, 159, 255, 0.22), transparent 66%),
+    linear-gradient(135deg, rgba(74, 108, 247, 0.18), rgba(59, 130, 246, 0.08));
+  border: 1px solid rgba(74, 108, 247, 0.32);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6d9fff;
+  font-size: 30px;
+  position: relative;
+  z-index: 1;
+  box-shadow:
+    0 0 0 8px rgba(74, 108, 247, 0.05),
+    0 0 22px rgba(74, 108, 247, 0.22);
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.highlight-icon-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -9px;
+  border-radius: 50%;
+  border: 1px solid rgba(74, 108, 247, 0.08);
+  transform: scale(0.88);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.highlight-icon-wrapper i {
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease, text-shadow 0.4s ease;
+}
+
+.highlight-title {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #e2e8f0;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+  transition: color 0.35s ease;
+}
+
+.highlight-card:hover .highlight-icon-wrapper {
+  transform: scale(1.1);
+  color: #ffffff;
+  border-color: rgba(109, 159, 255, 0.8);
+  background: linear-gradient(135deg, #3b82f6, #4a6cf7 55%, #6d9fff 100%);
+  box-shadow:
+    0 0 0 10px rgba(74, 108, 247, 0.09),
+    0 0 28px rgba(59, 130, 246, 0.55),
+    0 0 58px rgba(74, 108, 247, 0.32);
+}
+
+.highlight-card:hover .highlight-icon-wrapper::before {
+  transform: scale(1);
+  opacity: 1;
+  border-color: rgba(109, 159, 255, 0.38);
+  box-shadow: 0 0 24px rgba(74, 108, 247, 0.28);
+}
+
+.highlight-card:hover .highlight-icon-wrapper i {
+  transform: scale(1.08);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+.highlight-card:hover .highlight-title {
+  color: #6d9fff;
+}
+
+@media (max-width: 1200px) {
+  .highlights-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .highlight-card {
+    min-height: 210px;
+    padding: 28px 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .highlights {
+    padding: 32px 0;
+  }
+
+  .highlights .section-title {
+    margin-bottom: 32px;
+  }
+
+  .highlights-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .highlight-card {
+    min-height: 190px;
+    padding: 24px 18px;
+    border-radius: 20px;
+  }
+
+  .highlight-icon-wrapper {
+    width: 72px;
+    height: 72px;
+    font-size: 26px;
+  }
+
+  .highlight-title {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlights {
+    padding: 28px 0;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .highlight-card {
+    min-height: 170px;
+    padding: 24px 20px;
+  }
+
+  .highlight-icon-wrapper {
+    width: 66px;
+    height: 66px;
+    font-size: 24px;
+  }
+
+  .highlight-title {
+    font-size: 14px;
+  }
+}

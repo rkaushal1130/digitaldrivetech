@@ -1,0 +1,77 @@
+.career-tab {
+  padding: 4px 0;
+}
+
+.career-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.career-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  transition: background 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.career-card:hover {
+  background: rgba(74, 108, 247, 0.06);
+  border-color: rgba(74, 108, 247, 0.15);
+  transform: translateY(-2px);
+}
+
+.career-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(74, 108, 247, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a6cf7;
+  flex-shrink: 0;
+}
+
+.career-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.career-card-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.career-card-salary {
+  font-size: 12px;
+  color: #4a6cf7;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.career-note {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .career-grid {
+    grid-template-columns: 1fr;
+  }
+}
