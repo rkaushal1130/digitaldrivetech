@@ -12,7 +12,6 @@ import {
   ArrowRight,
   MapPin,
   Layers,
-  ArrowDown,
   Eye,
   Users,
   Award,
@@ -310,44 +309,69 @@ export default function SEO() {
             {/* ROW 1: Steps 01 to 04 */}
             <div className="seo-process-row">
               {row1Steps.map((step, idx) => (
-                <React.Fragment key={step.num}>
-                  <div className="seo-process-step-card">
-                    <div className="seo-step-num">{step.num}</div>
-                    <h4>{step.title}</h4>
-                  </div>
+                <div key={step.num} className="seo-process-step-card">
+                  <div className="seo-step-num">{step.num}</div>
+                  <h4>{step.title}</h4>
                   {idx < row1Steps.length - 1 && (
-                    <div className="seo-process-arrow-cell">
-                      <ArrowRight size={20} />
+                    <div className="seo-step-arrow-right">
+                      <ArrowRight size={18} />
                     </div>
                   )}
-                </React.Fragment>
+                </div>
               ))}
             </div>
 
-            {/* CONNECTOR BETWEEN ROW 1 & ROW 2 */}
-            <div className="seo-process-turn-connector">
-              <div className="seo-turn-line"></div>
-              <div className="seo-turn-badge">
-                <span>Phase 2: Execution & Continuous Growth</span>
-                <ArrowDown size={16} />
+            {/* S-CONNECTOR: CONNECTS STEP 04 DOWN & ACROSS TO STEP 05 */}
+            <div className="seo-process-bridge">
+              <div className="seo-bridge-container">
+                <svg
+                  className="seo-bridge-svg"
+                  viewBox="0 0 1000 54"
+                  preserveAspectRatio="none"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <defs>
+                    <linearGradient id="bridgeGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="50%" stopColor="#60a5fa" />
+                      <stop offset="100%" stopColor="#3b82f6" />
+                    </linearGradient>
+                    <marker
+                      id="bridgeArrow"
+                      viewBox="0 0 10 10"
+                      refX="5"
+                      refY="5"
+                      markerWidth="6"
+                      markerHeight="6"
+                      orient="auto"
+                    >
+                      <path d="M 0 1 L 9 5 L 0 9 z" fill="#3b82f6" />
+                    </marker>
+                  </defs>
+                  <path
+                    d="M 1000 0 L 1000 14 Q 1000 27 980 27 L 20 27 Q 0 27 0 40 L 0 50"
+                    stroke="url(#bridgeGradient)"
+                    strokeWidth="2.5"
+                    fill="none"
+                    markerEnd="url(#bridgeArrow)"
+                  />
+                </svg>
               </div>
-              <div className="seo-turn-line"></div>
             </div>
 
             {/* ROW 2: Steps 05 to 08 */}
             <div className="seo-process-row">
               {row2Steps.map((step, idx) => (
-                <React.Fragment key={step.num}>
-                  <div className="seo-process-step-card">
-                    <div className="seo-step-num">{step.num}</div>
-                    <h4>{step.title}</h4>
-                  </div>
+                <div key={step.num} className="seo-process-step-card">
+                  <div className="seo-step-num">{step.num}</div>
+                  <h4>{step.title}</h4>
                   {idx < row2Steps.length - 1 && (
-                    <div className="seo-process-arrow-cell">
-                      <ArrowRight size={20} />
+                    <div className="seo-step-arrow-right">
+                      <ArrowRight size={18} />
                     </div>
                   )}
-                </React.Fragment>
+                </div>
               ))}
             </div>
           </div>
