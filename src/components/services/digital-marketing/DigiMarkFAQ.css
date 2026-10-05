@@ -1,0 +1,248 @@
+.digimark-faq-section {
+  padding: 60px 0 80px;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 85% 15%, rgba(37, 99, 235, 0.1), transparent 50%),
+              radial-gradient(circle at 15% 85%, rgba(59, 130, 246, 0.08), transparent 45%);
+}
+
+.digimark-faq-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 50px;
+}
+
+.digimark-faq-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  color: #60a5fa;
+  padding: 8px 18px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.digimark-faq-title {
+  font-size: 2.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  margin-bottom: 14px;
+  line-height: 1.2;
+}
+
+.digimark-faq-title span {
+  background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.digimark-faq-subtitle {
+  font-size: 1.05rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+.digimark-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.digimark-faq-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.digimark-faq-item {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(59, 130, 246, 0.22);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+}
+
+.digimark-faq-item:hover {
+  border-color: rgba(59, 130, 246, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35), 0 0 15px rgba(37, 99, 235, 0.15);
+}
+
+.digimark-faq-item.open {
+  border-color: #3b82f6;
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(37, 99, 235, 0.22);
+}
+
+.digimark-faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #f1f5f9;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.4;
+  gap: 16px;
+  transition: color 0.25s ease;
+  font-family: inherit;
+}
+
+.digimark-faq-question:hover {
+  color: #60a5fa;
+}
+
+.digimark-faq-item.open .digimark-faq-question {
+  color: #60a5fa;
+  border-bottom: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.digimark-faq-q-text {
+  flex: 1;
+}
+
+.digimark-faq-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(59, 130, 246, 0.12);
+  color: #3b82f6;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.digimark-faq-item:hover .digimark-faq-icon-wrapper {
+  background: rgba(59, 130, 246, 0.25);
+  color: #60a5fa;
+}
+
+.digimark-faq-chevron {
+  transition: transform 0.3s ease;
+}
+
+.digimark-faq-item.open .digimark-faq-chevron {
+  transform: rotate(180deg);
+}
+
+.digimark-faq-item.open .digimark-faq-icon-wrapper {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.digimark-faq-answer {
+  padding: 20px 24px 22px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  animation: digimarkFaqSlideDown 0.3s ease-out;
+}
+
+.digimark-faq-answer p {
+  margin: 0 0 12px;
+}
+
+.digimark-faq-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.digimark-faq-lead-types {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.digimark-faq-lead-item {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.digimark-faq-lead-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 3px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+
+.digimark-faq-lead-badge.organic {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.digimark-faq-lead-badge.paid {
+  background: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.digimark-faq-lead-item p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
+
+@keyframes digimarkFaqSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 992px) {
+  .digimark-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .digimark-faq-title {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .digimark-faq-section {
+    padding: 40px 0 60px;
+  }
+
+  .digimark-faq-title {
+    font-size: 1.85rem;
+  }
+
+  .digimark-faq-question {
+    font-size: 0.95rem;
+    padding: 16px 18px;
+  }
+
+  .digimark-faq-answer {
+    padding: 16px 18px 18px;
+    font-size: 0.9rem;
+  }
+}
