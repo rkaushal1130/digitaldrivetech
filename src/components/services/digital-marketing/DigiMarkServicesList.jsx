@@ -12,6 +12,7 @@ const servicesData = [
     title: 'SEO (Search Engine Optimization)',
     description: 'Improve search rankings, organic traffic, and online visibility.',
     icon: <Search size={26} />,
+    path: '/services/seo',
   },
   {
     id: 2,
@@ -19,6 +20,7 @@ const servicesData = [
     title: 'PPC (Pay Per Click)',
     description: 'Reach potential customers through targeted, performance-focused paid advertising.',
     icon: <MousePointer size={26} />,
+    path: '/contact',
   },
   {
     id: 3,
@@ -26,6 +28,7 @@ const servicesData = [
     title: 'SMM (Social Media Marketing)',
     description: 'Build brand awareness and engage your target audience.',
     icon: <Share2 size={26} />,
+    path: '/services/social-media-marketing',
   },
   {
     id: 4,
@@ -33,6 +36,7 @@ const servicesData = [
     title: 'SMO (Social Media Optimization)',
     description: 'We optimize your social media to improve organic visibility, engagement, followers, and brand awareness organically.',
     icon: <Sparkles size={26} />,
+    path: '/contact',
   },
 ];
 
@@ -62,7 +66,7 @@ export default function DigiMarkServicesList() {
               <div className="digimark-service-action">
                 <Button
                   variant="outline"
-                  onClick={() => navigate('/contact')}
+                  onClick={() => navigate(service.path)}
                   className="digimark-explore-btn"
                 >
                   Explore more <ArrowRight size={16} style={{ marginLeft: '6px', verticalAlign: 'middle' }} />

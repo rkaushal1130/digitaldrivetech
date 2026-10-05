@@ -12,6 +12,8 @@ import MobileAppDevelopment from "../pages/MobileAppDevelopment";
 import UIUXDesign from "../pages/UIUXDesign";
 import SoftwareDevelopment from "../pages/SoftwareDevelopment";
 import DigitalMarketing from "../pages/DigitalMarketing";
+import SEO from "../pages/SEO";
+import SocialMediaMarketing from "../pages/SocialMediaMarketing";
 
 export default function AppRoutes() {
   return (
@@ -29,6 +31,12 @@ export default function AppRoutes() {
       <Route path="/software-development" element={<SoftwareDevelopment />} />
       <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
       <Route path="/digital-marketing" element={<DigitalMarketing />} />
+      <Route path="/services/seo" element={<SEO />} />
+      <Route path="/seo" element={<SEO />} />
+      <Route path="/seo-company-in-mohali" element={<SEO />} />
+      <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
+      <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
+      <Route path="/services/smm" element={<SocialMediaMarketing />} />
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/technologies" element={<Technologies />} />
       <Route path="/pricing" element={<Pricing />} />
