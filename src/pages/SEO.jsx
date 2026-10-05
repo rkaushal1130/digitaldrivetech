@@ -150,16 +150,15 @@ export default function SEO() {
                 SEO <span>(Search Engine Optimization)</span>
               </h1>
 
-              <p className="seo-lead">
-                SEO (Search Engine Optimization) is a process of improving website visibility in organic search results. Are you looking for an SEO company in Mohali?
-              </p>
-
               <div className="seo-hero-desc">
+                <p>
+                  SEO (Search Engine Optimization) is a process of improving website visibility in organic search results. Are you looking for an SEO company in Mohali?
+                </p>
                 <p>
                   It can help your business improve its organic visibility and appear in relevant Google search results. SEO is a long-term process that can gradually improve your website’s visibility, organic traffic, and online presence.
                 </p>
                 <p>
-                  This is possible with a reliable Search Engine Optimisation company in Mohali. So, your wait is over. At <strong>Digital Drive Resource Tech Private Limited (DigitalDriveTech)</strong>, you can get reliable SEO services in Mohali.
+                  This is possible with a reliable Search Engine Optimisation company in Mohali. So, your wait is over. At Digital Drive Resource Tech Private Limited (DigitalDriveTech), you can get reliable SEO services in Mohali.
                 </p>
                 <p>
                   First, we analyse your business and understand its requirements, then plan content and strategies tailored to your business that help promote or grow it naturally through digital channels while attracting relevant visitors.

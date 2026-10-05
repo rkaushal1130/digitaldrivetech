@@ -95,7 +95,7 @@ export default function SocialMediaMarketing() {
             <div className="smm-hero-content">
               <div className="smm-keyword-badge">
                 <MapPin size={16} />
-                <span>Social Media Marketing in Mohali</span>
+                <span>Social Media Marketing Company in Mohali</span>
               </div>
 
               <h1 className="smm-main-title">
