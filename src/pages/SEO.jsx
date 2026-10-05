@@ -118,11 +118,14 @@ export default function SEO() {
     },
   ];
 
-  const processSteps = [
+  const row1Steps = [
     { num: '01', title: 'Business Analysis' },
     { num: '02', title: 'Business Understanding' },
     { num: '03', title: 'Audience & Keyword Research' },
     { num: '04', title: 'SEO & Content Strategy' },
+  ];
+
+  const row2Steps = [
     { num: '05', title: 'SEO Execution' },
     { num: '06', title: 'Performance Tracking' },
     { num: '07', title: 'Optimisation' },
@@ -303,21 +306,50 @@ export default function SEO() {
             </p>
           </div>
 
-          <div className="seo-process-flow">
-            {processSteps.map((step, idx) => (
-              <React.Fragment key={step.num}>
-                <div className="seo-process-step-card">
-                  <div className="seo-step-num">{step.num}</div>
-                  <h4>{step.title}</h4>
-                </div>
-                {idx < processSteps.length - 1 && (
-                  <div className="seo-process-arrow">
-                    <ArrowRight size={20} className="arrow-desktop" />
-                    <ArrowDown size={20} className="arrow-mobile" />
+          <div className="seo-process-wrapper">
+            {/* ROW 1: Steps 01 to 04 */}
+            <div className="seo-process-row">
+              {row1Steps.map((step, idx) => (
+                <React.Fragment key={step.num}>
+                  <div className="seo-process-step-card">
+                    <div className="seo-step-num">{step.num}</div>
+                    <h4>{step.title}</h4>
                   </div>
-                )}
-              </React.Fragment>
-            ))}
+                  {idx < row1Steps.length - 1 && (
+                    <div className="seo-process-arrow-cell">
+                      <ArrowRight size={20} />
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
+
+            {/* CONNECTOR BETWEEN ROW 1 & ROW 2 */}
+            <div className="seo-process-turn-connector">
+              <div className="seo-turn-line"></div>
+              <div className="seo-turn-badge">
+                <span>Phase 2: Execution & Continuous Growth</span>
+                <ArrowDown size={16} />
+              </div>
+              <div className="seo-turn-line"></div>
+            </div>
+
+            {/* ROW 2: Steps 05 to 08 */}
+            <div className="seo-process-row">
+              {row2Steps.map((step, idx) => (
+                <React.Fragment key={step.num}>
+                  <div className="seo-process-step-card">
+                    <div className="seo-step-num">{step.num}</div>
+                    <h4>{step.title}</h4>
+                  </div>
+                  {idx < row2Steps.length - 1 && (
+                    <div className="seo-process-arrow-cell">
+                      <ArrowRight size={20} />
+                    </div>
+                  )}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
         </Container>
       </section>
