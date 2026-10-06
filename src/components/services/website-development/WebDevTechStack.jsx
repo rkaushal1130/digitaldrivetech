@@ -75,7 +75,7 @@ export default function WebDevTechStack() {
       <Container>
         <div className="webdev-tech-card">
           <div className="webdev-tech-header">
-            <h2>TECHNOLOGIES WE USE</h2>
+            <h2>Technologies We Use for Website Development</h2>
           </div>
 
           <div className="webdev-tech-columns">
@@ -89,7 +89,14 @@ export default function WebDevTechStack() {
                     <div key={itemIdx} className="webdev-tech-item">
                       <div className="webdev-tech-icon-box">
                         {item.logo ? (
-                          <img src={item.logo} alt={item.name} className="webdev-tech-logo-img" />
+                          <img
+                            src={item.logo}
+                            alt={item.name}
+                            className="webdev-tech-logo-img"
+                            width="32"
+                            height="32"
+                            loading="lazy"
+                          />
                         ) : (
                           <i className={item.iconClass || 'fa-solid fa-code'}></i>
                         )}

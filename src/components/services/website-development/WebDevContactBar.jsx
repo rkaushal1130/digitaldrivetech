@@ -12,7 +12,7 @@ export default function WebDevContactBar() {
       <Container>
         <div className="webdev-contact-bar">
           <div className="webdev-contact-grid">
-            <a href="tel:8360686961" className="webdev-contact-item">
+            <a href="tel:8360686961" className="webdev-contact-item" title="Call Digital Drive Resource Tech">
               <div className="webdev-contact-icon">
                 <Phone size={22} />
               </div>
@@ -22,7 +22,7 @@ export default function WebDevContactBar() {
               </div>
             </a>
 
-            <a href="mailto:admin@digitaldrivetech.com" className="webdev-contact-item">
+            <a href="mailto:admin@digitaldrivetech.com" className="webdev-contact-item" title="Email Digital Drive Resource Tech">
               <div className="webdev-contact-icon">
                 <Mail size={22} />
               </div>
@@ -32,7 +32,7 @@ export default function WebDevContactBar() {
               </div>
             </a>
 
-            <a href="https://www.digitaldrivetech.com" target="_blank" rel="noopener noreferrer" className="webdev-contact-item">
+            <a href="https://www.digitaldrivetech.com" target="_blank" rel="noopener noreferrer" className="webdev-contact-item" title="Digital Drive Official Website">
               <div className="webdev-contact-icon">
                 <Globe size={22} />
               </div>
@@ -44,7 +44,7 @@ export default function WebDevContactBar() {
           </div>
 
           <div className="webdev-contact-cta">
-            <button className="webdev-consult-btn" onClick={() => navigate('/contact')}>
+            <button className="webdev-consult-btn" onClick={() => navigate('/contact')} title="Schedule Free Consultation">
               Get Free Consultation <ArrowRight size={18} />
             </button>
           </div>

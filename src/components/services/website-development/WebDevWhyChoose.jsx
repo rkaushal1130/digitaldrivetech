@@ -42,7 +42,7 @@ export default function WebDevWhyChoose() {
       <Container>
         <div className="webdev-why-card">
           <div className="webdev-why-header">
-            <h2>WHY CHOOSE US?</h2>
+            <h2>Why Choose Digital Drive for Website Development?</h2>
           </div>
 
           <div className="webdev-why-grid">

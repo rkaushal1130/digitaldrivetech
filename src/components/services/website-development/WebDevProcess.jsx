@@ -48,7 +48,7 @@ export default function WebDevProcess() {
       <Container>
         <div className="webdev-process-card">
           <div className="webdev-process-header">
-            <h2>OUR DEVELOPMENT PROCESS</h2>
+            <h2>Our Website Development Process</h2>
           </div>
 
           <div className="webdev-process-timeline">

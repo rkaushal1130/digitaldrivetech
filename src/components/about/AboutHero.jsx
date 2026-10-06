@@ -15,7 +15,7 @@ export default function AboutHero() {
           <div className="hero-copy">
             <div className="eyebrow">About Us</div>
             <h1>
-              We Build Digital <span className="accent">Solutions</span> That Drive Growth
+              Digital <span className="accent">Solutions</span> Company in Mohali
             </h1>
             <p>
               Digital Drive Resource Tech Private Limited is a full-service digital company that helps businesses go online with powerful

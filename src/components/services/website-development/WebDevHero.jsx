@@ -1,9 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import Button from '../../ui/Button';
 import { Monitor, Gauge, ShieldCheck, TrendingUp, Code2, ArrowRight } from 'lucide-react';
-import logoImage from '../../../assets/icons/logo.png';
 import webDevHeroImg from '../../../assets/images/services-new-addons/web.webp';
 import './WebDevHero.css';
 
@@ -22,25 +21,31 @@ export default function WebDevHero() {
     <section className="webdev-hero">
       <div className="webdev-hero-bg-glow"></div>
       <Container>
+        {/* BREADCRUMB */}
+        <nav aria-label="Breadcrumb" className="webdev-breadcrumb">
+          <ol>
+            <li>
+              <Link to="/" title="Home">Home</Link>
+            </li>
+            <li className="breadcrumb-separator" aria-hidden="true">/</li>
+            <li>
+              <Link to="/services" title="Services">Services</Link>
+            </li>
+            <li className="breadcrumb-separator" aria-hidden="true">/</li>
+            <li aria-current="page">Website Development</li>
+          </ol>
+        </nav>
+
         <div className="webdev-hero-grid">
           <div className="webdev-hero-content">
-            <div className="webdev-brand-badge">
-              <img src={logoImage} alt="Digital Drive Resource Tech" className="webdev-brand-logo" />
-              <div className="webdev-brand-text">
-                <span className="webdev-brand-name">DIGITAL DRIVE</span>
-                <span className="webdev-brand-sub">RESOURCE TECH PRIVATE LIMITED</span>
-                <span className="webdev-brand-slogan">Driving Digital Innovation</span>
-              </div>
-            </div>
-
             <h1 className="webdev-main-title">
-              WEB <span>DEVELOPMENT</span>
+              Website <span>Development</span> Company in Mohali
             </h1>
 
             <p className="webdev-tagline">Build Modern. Perform Better. Grow Faster.</p>
 
             <p className="webdev-description">
-              We design and develop fast, secure, and scalable websites that deliver exceptional user experiences and drive measurable business results.
+              Digital Drive provides professional website development services in Mohali and across India. We build fast, secure, mobile-friendly and SEO-ready websites for businesses, startups, e-commerce brands and organizations.
             </p>
 
             <div className="webdev-pills-row">
@@ -67,8 +72,11 @@ export default function WebDevHero() {
             <div className="webdev-hero-image-container">
               <img
                 src={webDevHeroImg}
-                alt="Web Development Digital Drive"
+                alt="Website development services by Digital Drive in Mohali"
                 className="webdev-hero-right-img"
+                width="520"
+                height="420"
+                fetchPriority="high"
               />
             </div>
           </div>

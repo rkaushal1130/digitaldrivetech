@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SEOHead from '../components/common/SEOHead';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 import {
@@ -135,6 +136,17 @@ export default function SEO() {
 
   return (
     <div className="seo-page">
+      <SEOHead
+        pageUrl="https://www.digitaldrivetech.com/seo-company-in-mohali"
+        pageTitle="SEO Company in Mohali | SEO Services | DigitalDriveTech"
+        metaTitle="SEO Company in Mohali | SEO Services | DigitalDriveTech"
+        metaDescription="Boost your online visibility with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a reliable SEO company in Mohali. Get SEO strategies tailored to your business goals."
+        ogTitle="SEO Company in Mohali | SEO Services | DigitalDriveTech"
+        ogDescription="Boost your online visibility with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a reliable SEO company in Mohali. Get SEO strategies tailored to your business goals."
+        ogUrl="https://www.digitaldrivetech.com/seo-company-in-mohali"
+        twitterTitle="SEO Company in Mohali | SEO Services | DigitalDriveTech"
+        twitterDescription="Boost your online visibility with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a reliable SEO company in Mohali. Get SEO strategies tailored to your business goals."
+      />
       {/* HERO SECTION */}
       <section className="seo-hero">
         <div className="seo-hero-glow"></div>
@@ -147,7 +159,7 @@ export default function SEO() {
               </div>
 
               <h1 className="seo-main-title">
-                SEO <span>(Search Engine Optimization)</span>
+                SEO Services <span>| SEO Company in Mohali</span>
               </h1>
 
               <div className="seo-hero-desc">
