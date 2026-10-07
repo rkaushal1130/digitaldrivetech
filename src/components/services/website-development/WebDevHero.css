@@ -1,9 +1,63 @@
 .webdev-hero {
   position: relative;
-  padding: 80px 0 60px;
+  padding: 100px 0 85px;
   overflow: hidden;
-  background: radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.15), transparent 45%),
-              radial-gradient(circle at 90% 80%, rgba(59, 130, 246, 0.12), transparent 40%);
+  background-color: #020617;
+  isolation: isolate;
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+}
+
+/* Background Media Layer */
+.webdev-hero-bg-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.webdev-hero-bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% 32%;
+  opacity: 0.88;
+  filter: saturate(1.18) contrast(1.08) brightness(0.96);
+  transform: scale(1.01);
+  transition: transform 0.6s ease;
+}
+
+/* Multi-stop Scrim & Gradient Overlays for 100% Readability & Seamless Transitions */
+.webdev-hero-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    /* Deep dark scrim on the left for text contrast, opening up for the workstation on the right */
+    linear-gradient(to right,
+      rgba(2, 6, 23, 0.98) 0%,
+      rgba(2, 6, 23, 0.94) 38%,
+      rgba(2, 6, 23, 0.68) 58%,
+      rgba(2, 6, 23, 0.18) 78%,
+      rgba(2, 6, 23, 0.30) 100%
+    ),
+    /* Top and bottom feathering to merge seamlessly into navbar and next section */
+    linear-gradient(to bottom,
+      rgba(2, 6, 23, 0.82) 0%,
+      transparent 14%,
+      transparent 82%,
+      #020617 100%
+    );
+  pointer-events: none;
+}
+
+.webdev-hero-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .webdev-breadcrumb {
@@ -55,19 +109,25 @@
 
 .webdev-hero-bg-glow {
   position: absolute;
-  top: -100px;
+  top: -120px;
   right: -100px;
-  width: 500px;
-  height: 500px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, transparent 70%);
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, transparent 70%);
   pointer-events: none;
+  z-index: 0;
 }
 
 .webdev-hero-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 50px;
+  display: flex;
   align-items: center;
+  width: 100%;
+}
+
+.webdev-hero-content {
+  max-width: 660px;
+  position: relative;
+  z-index: 2;
 }
 
 .webdev-brand-badge {
@@ -124,6 +184,7 @@
   letter-spacing: -1px;
   line-height: 1.05;
   margin-bottom: 12px;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.75);
 }
 
 .webdev-main-title span {
@@ -132,6 +193,7 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  filter: drop-shadow(0 2px 14px rgba(59, 130, 246, 0.4));
 }
 
 .webdev-tagline {
@@ -140,6 +202,7 @@
   color: #60a5fa;
   margin-bottom: 16px;
   letter-spacing: -0.2px;
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.35);
 }
 
 .webdev-description {
@@ -148,6 +211,7 @@
   line-height: 1.7;
   margin-bottom: 28px;
   max-width: 620px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .webdev-pills-row {
@@ -214,27 +278,28 @@
   z-index: 2;
   border-radius: 24px;
   overflow: hidden;
-  border: 1px solid rgba(59, 130, 246, 0.35);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(37, 99, 235, 0.3);
+  border: 1px solid rgba(59, 130, 246, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.65), 0 0 40px rgba(37, 99, 235, 0.35);
   max-width: 520px;
   width: 100%;
   aspect-ratio: 520 / 420;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   background: #0f172a;
 }
 
 .webdev-hero-image-container:hover {
   transform: translateY(-6px);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 45px rgba(37, 99, 235, 0.45);
-  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.75), 0 0 55px rgba(56, 189, 248, 0.5);
+  border-color: rgba(56, 189, 248, 0.7);
 }
 
 .webdev-hero-right-img {
   width: 100%;
-  height: auto;
+  height: 100%;
   aspect-ratio: 520 / 420;
   display: block;
   object-fit: cover;
+  object-position: center 25%;
   border-radius: 24px;
 }
 
@@ -340,8 +405,24 @@
 }
 
 @media (max-width: 992px) {
-  .webdev-hero-grid {
-    grid-template-columns: 1fr;
+  .webdev-hero {
+    padding: 80px 0 60px;
+    min-height: 540px;
+  }
+
+  .webdev-hero-bg-img {
+    object-position: 70% 30%;
+    opacity: 0.55;
+  }
+
+  .webdev-hero-bg-overlay {
+    background:
+      linear-gradient(to right, rgba(2, 6, 23, 0.96) 0%, rgba(2, 6, 23, 0.90) 65%, rgba(2, 6, 23, 0.65) 100%),
+      linear-gradient(to bottom, rgba(2, 6, 23, 0.75) 0%, transparent 18%, transparent 82%, #020617 100%);
+  }
+
+  .webdev-hero-content {
+    max-width: 100%;
   }
 
   .webdev-main-title {
@@ -350,8 +431,23 @@
 }
 
 @media (max-width: 576px) {
+  .webdev-hero {
+    padding: 60px 0 40px;
+    min-height: auto;
+  }
+
+  .webdev-hero-bg-img {
+    object-position: 65% 25%;
+    opacity: 0.42;
+  }
+
+  .webdev-hero-bg-overlay {
+    background:
+      linear-gradient(to bottom, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.86) 45%, rgba(2, 6, 23, 0.97) 100%);
+  }
+
   .webdev-main-title {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
   }
 
   .webdev-tagline {
@@ -364,5 +460,15 @@
 
   .webdev-brand-logo {
     height: 38px;
+  }
+
+  .webdev-hero-btns {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .webdev-hero-btns .btn {
+    width: 100%;
+    text-align: center;
   }
 }

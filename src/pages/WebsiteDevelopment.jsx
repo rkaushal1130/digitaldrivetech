@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import SEOHead from '../components/common/SEOHead';
 import webDevSchema from '../data/webDevSchema';
-import webDevHeroImg from '../assets/images/services-new-addons/web.webp';
+import neonDevHeroImg from '../assets/images/services-new-addons/neon-dev-workstation.png';
 import WebDevHero from '../components/services/website-development/WebDevHero';
 import WebDevAbout from '../components/services/website-development/WebDevAbout';
 import WebDevServicesList from '../components/services/website-development/WebDevServicesList';
@@ -34,7 +34,7 @@ export default function WebsiteDevelopment() {
         twitterDescription="Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a Website Development company in Mohali, offering result-driven services with transparent reporting to grow your business."
         twitterImage="https://www.digitaldrivetech.com/images/website-development-og.jpg"
         structuredData={webDevSchema}
-        preloadImage={webDevHeroImg}
+        preloadImage={neonDevHeroImg}
       />
       <main id="main-content" className="website-development-main">
         <WebDevHero />

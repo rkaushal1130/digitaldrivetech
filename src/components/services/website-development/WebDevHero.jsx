@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import Button from '../../ui/Button';
 import { Monitor, Gauge, ShieldCheck, TrendingUp, Code2, ArrowRight } from 'lucide-react';
-import webDevHeroImg from '../../../assets/images/services-new-addons/web.webp';
+import neonDevHeroImg from '../../../assets/images/services-new-addons/neon-dev-workstation.png';
 import './WebDevHero.css';
 
 export default function WebDevHero() {
@@ -17,8 +17,21 @@ export default function WebDevHero() {
 
   return (
     <section className="webdev-hero">
-      <div className="webdev-hero-bg-glow"></div>
-      <Container>
+      {/* Background Neon Developer Workstation Media Layer */}
+      <div className="webdev-hero-bg-layer" aria-hidden="true">
+        <img
+          src={neonDevHeroImg}
+          alt=""
+          className="webdev-hero-bg-img"
+          fetchPriority="high"
+          decoding="async"
+        />
+        <div className="webdev-hero-bg-overlay"></div>
+      </div>
+
+      <div className="webdev-hero-bg-glow" aria-hidden="true"></div>
+
+      <Container className="webdev-hero-container">
         {/* BREADCRUMB */}
         <nav aria-label="Breadcrumb" className="webdev-breadcrumb">
           <ol>
@@ -58,21 +71,6 @@ export default function WebDevHero() {
               <Button variant="outline" to="/portfolio">
                 View Our Work
               </Button>
-            </div>
-          </div>
-
-          <div className="webdev-hero-visual">
-            <div className="webdev-glow-sphere"></div>
-            <div className="webdev-hero-image-container">
-              <img
-                src={webDevHeroImg}
-                alt="Website development services by Digital Drive in Mohali"
-                className="webdev-hero-right-img"
-                width="520"
-                height="420"
-                fetchPriority="high"
-                decoding="async"
-              />
             </div>
           </div>
         </div>
