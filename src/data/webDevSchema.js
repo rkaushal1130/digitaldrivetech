@@ -91,8 +91,8 @@ export const webDevSchema = {
       '@type': 'WebPage',
       '@id': 'https://www.digitaldrivetech.com/website-development#webpage',
       'url': 'https://www.digitaldrivetech.com/website-development',
-      'name': 'Website Development Company in Mohali | Digital Drive Tech',
-      'description': 'Digital Drive is a trusted website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications and e-commerce stores across Chandigarh, Punjab and India.',
+      'name': 'Website Development Company in Mohali | Website Development Services | DigitalDriveTech',
+      'description': 'Boost your online growth with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a leading website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications, and e-commerce stores tailored to your business goals.',
       'isPartOf': {
         '@id': 'https://www.digitaldrivetech.com/#website'
       },

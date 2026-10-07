@@ -23,15 +23,15 @@ export default function WebsiteDevelopment() {
     <div className="website-development-page">
       <SEOHead
         pageUrl="https://www.digitaldrivetech.com/website-development"
-        pageTitle="Website Development Company in Mohali | Digital Drive Tech"
-        metaTitle="Website Development Company in Mohali | Digital Drive Tech"
-        metaDescription="Digital Drive is a trusted website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications and e-commerce stores across Chandigarh, Punjab and India."
-        ogTitle="Website Development Company in Mohali | Digital Drive Tech"
-        ogDescription="Digital Drive is a trusted website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications and e-commerce stores across Chandigarh, Punjab and India."
+        pageTitle="Website Development Services | Website Development Company in Mohali"
+        metaTitle="Website Development Company in Mohali | Website Development Services | DigitalDriveTech"
+        metaDescription="Boost your online growth with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a leading website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications, and e-commerce stores tailored to your business goals."
+        ogTitle="Website Development Company in Mohali | Website Development Services | DigitalDriveTech"
+        ogDescription="Boost your online growth with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a leading website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications, and e-commerce stores tailored to your business goals."
         ogUrl="https://www.digitaldrivetech.com/website-development"
         ogImage="https://www.digitaldrivetech.com/images/website-development-og.jpg"
-        twitterTitle="Website Development Company in Mohali | Digital Drive Tech"
-        twitterDescription="Digital Drive is a trusted website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications and e-commerce stores across Chandigarh, Punjab and India."
+        twitterTitle="Website Development Company in Mohali | Website Development Services | DigitalDriveTech"
+        twitterDescription="Boost your online growth with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a leading website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications, and e-commerce stores tailored to your business goals."
         twitterImage="https://www.digitaldrivetech.com/images/website-development-og.jpg"
         structuredData={webDevSchema}
         preloadImage={webDevHeroImg}

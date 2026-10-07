@@ -29,6 +29,8 @@ export default function AppRoutes() {
       <Route path="/services/website-development" element={<Navigate to="/website-development" replace />} />
       <Route path="/web-development" element={<Navigate to="/website-development" replace />} />
       <Route path="/services/web-development" element={<Navigate to="/website-development" replace />} />
+      <Route path="/website-development-company-in-mohali" element={<Navigate to="/website-development" replace />} />
+      <Route path="/website-development-services-in-mohali" element={<Navigate to="/website-development" replace />} />
       <Route path="/website-development" element={<WebsiteDevelopment />} />
       <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
       <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
