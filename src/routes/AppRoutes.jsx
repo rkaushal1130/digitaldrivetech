@@ -1,27 +1,34 @@
-import { Routes, Route } from "react-router-dom";
+import React, { Suspense, lazy } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "../pages/Home";
-import About from "../pages/About";
-import Services from "../pages/Services";
-import PortfolioPage from "../pages/PortfolioPage";
-import Technologies from "../pages/Technologies";
-import Pricing from "../pages/Pricing";
-import Contact from "../pages/Contact";
-import InternshipTraining from "../pages/InternshipTraining";
 import WebsiteDevelopment from "../pages/WebsiteDevelopment";
-import MobileAppDevelopment from "../pages/MobileAppDevelopment";
-import UIUXDesign from "../pages/UIUXDesign";
-import SoftwareDevelopment from "../pages/SoftwareDevelopment";
-import DigitalMarketing from "../pages/DigitalMarketing";
-import SEO from "../pages/SEO";
-import SocialMediaMarketing from "../pages/SocialMediaMarketing";
+
+const About = lazy(() => import("../pages/About"));
+const Services = lazy(() => import("../pages/Services"));
+const PortfolioPage = lazy(() => import("../pages/PortfolioPage"));
+const Technologies = lazy(() => import("../pages/Technologies"));
+const Pricing = lazy(() => import("../pages/Pricing"));
+const Contact = lazy(() => import("../pages/Contact"));
+const InternshipTraining = lazy(() => import("../pages/InternshipTraining"));
+const MobileAppDevelopment = lazy(() => import("../pages/MobileAppDevelopment"));
+const UIUXDesign = lazy(() => import("../pages/UIUXDesign"));
+const SoftwareDevelopment = lazy(() => import("../pages/SoftwareDevelopment"));
+const DigitalMarketing = lazy(() => import("../pages/DigitalMarketing"));
+const SEO = lazy(() => import("../pages/SEO"));
+const SocialMediaMarketing = lazy(() => import("../pages/SocialMediaMarketing"));
+const Blog = lazy(() => import("../pages/Blog"));
+const BlogArticle = lazy(() => import("../pages/BlogArticle"));
 
 export default function AppRoutes() {
   return (
-    <Routes>
+    <Suspense fallback={null}>
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/services" element={<Services />} />
-      <Route path="/services/website-development" element={<WebsiteDevelopment />} />
+      <Route path="/services/website-development" element={<Navigate to="/website-development" replace />} />
+      <Route path="/web-development" element={<Navigate to="/website-development" replace />} />
+      <Route path="/services/web-development" element={<Navigate to="/website-development" replace />} />
       <Route path="/website-development" element={<WebsiteDevelopment />} />
       <Route path="/services/mobile-app-development" element={<MobileAppDevelopment />} />
       <Route path="/mobile-app-development" element={<MobileAppDevelopment />} />
@@ -41,7 +48,13 @@ export default function AppRoutes() {
       <Route path="/technologies" element={<Technologies />} />
       <Route path="/pricing" element={<Pricing />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/internship-training-in-mohali" element={<InternshipTraining />} />
       <Route path="/internship-training" element={<InternshipTraining />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<BlogArticle />} />
+      <Route path="/articles" element={<Navigate to="/blog" replace />} />
+      <Route path="/resources" element={<Navigate to="/blog" replace />} />
     </Routes>
+    </Suspense>
   );
 }

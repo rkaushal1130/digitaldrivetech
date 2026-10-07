@@ -1,12 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import { Phone, Mail, Globe, ArrowRight } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import './WebDevContactBar.css';
 
 export default function WebDevContactBar() {
-  const navigate = useNavigate();
-
   return (
     <section className="webdev-contact-section">
       <Container>
@@ -44,9 +42,9 @@ export default function WebDevContactBar() {
           </div>
 
           <div className="webdev-contact-cta">
-            <button className="webdev-consult-btn" onClick={() => navigate('/contact')} title="Schedule Free Consultation">
+            <Link to="/contact" className="webdev-consult-btn" title="Schedule Free Website Consultation">
               Get Free Consultation <ArrowRight size={18} />
-            </button>
+            </Link>
           </div>
         </div>
       </Container>

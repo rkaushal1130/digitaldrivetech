@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import { Code2, Monitor, Smartphone, Cloud, Settings, Database, ShieldCheck, Wrench } from 'lucide-react';
 import logoImage from '../../../assets/icons/logo.png';
@@ -16,7 +17,15 @@ export default function SoftDevAbout() {
       id: 2,
       icon: <Monitor size={28} />,
       title: 'Web Application Development',
-      description: 'Scalable, secure, and feature-rich web applications using modern technologies.',
+      description: (
+        <>
+          Scalable, secure, and feature-rich web applications and{' '}
+          <Link to="/website-development" className="softdev-inline-link" title="Website Development Services">
+            website development
+          </Link>{' '}
+          using modern technologies.
+        </>
+      ),
     },
     {
       id: 3,

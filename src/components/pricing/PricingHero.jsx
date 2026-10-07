@@ -12,7 +12,7 @@ export default function PricingHero() {
         <div className="pricing-hero-inner">
           <div className="pricing-hero-text">
             <div className="pricing-eyebrow">PRICING PLANS</div>
-            <h1>Simple, Transparent Pricing For <span>Everyone</span></h1>
+            <h1>Digital Services & <span>Plans</span></h1>
             <p>
               Choose the perfect plan for your business needs. All plans are scalable and comes with our dedicated support.
             </p>

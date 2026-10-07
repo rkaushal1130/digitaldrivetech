@@ -1,113 +1,341 @@
 import React from 'react';
 import Container from '../../ui/Container';
-
-import html5Icon from '../../../assets/icons/SVG ICONS/html-5.svg';
-import css3Icon from '../../../assets/icons/SVG ICONS/css3.svg';
-import jsIcon from '../../../assets/icons/SVG ICONS/javascript-svgrepo-com.svg';
-import reactIcon from '../../../assets/icons/SVG ICONS/react-svgrepo-com.svg';
-import nextIcon from '../../../assets/icons/SVG ICONS/next-dot-js-svgrepo-com.svg';
-import nodeIcon from '../../../assets/icons/SVG ICONS/nodejs-logo-svgrepo-com.svg';
-import laravelIcon from '../../../assets/icons/SVG ICONS/Laravel.svg';
-import phpIcon from '../../../assets/icons/SVG ICONS/php-svgrepo-com.svg';
-import mysqlIcon from '../../../assets/icons/SVG ICONS/mysql-logo-svgrepo-com.svg';
-import firebaseIcon from '../../../assets/icons/SVG ICONS/firebase-1-logo-svgrepo-com.svg';
-
 import './WebDevTechStack.css';
 
+const techStackList = [
+  // Row 1
+  {
+    name: 'React',
+    color: '#61dafb',
+    svg: (
+      <svg viewBox="0 0 115.3 100" fill="currentColor">
+        <ellipse cx="57.65" cy="50" rx="10" ry="4.5" />
+        <ellipse cx="57.65" cy="50" rx="55" ry="21" fill="none" stroke="currentColor" strokeWidth="4.2" />
+        <ellipse cx="57.65" cy="50" rx="55" ry="21" fill="none" stroke="currentColor" strokeWidth="4.2" transform="rotate(60 57.65 50)" />
+        <ellipse cx="57.65" cy="50" rx="55" ry="21" fill="none" stroke="currentColor" strokeWidth="4.2" transform="rotate(120 57.65 50)" />
+      </svg>
+    )
+  },
+  {
+    name: 'Next.js',
+    color: '#ffffff',
+    svg: (
+      <svg viewBox="0 0 180 180" fill="currentColor">
+        <mask height="180" id="next-mask" maskUnits="userSpaceOnUse" width="180" x="0" y="0" style={{ maskType: 'alpha' }}>
+          <circle cx="90" cy="90" fill="#000" r="90" />
+        </mask>
+        <g mask="url(#next-mask)">
+          <circle cx="90" cy="90" fill="#000000" stroke="#333333" strokeWidth="6" r="87" />
+          <path d="M149.508 157.438L69.13 54H54V125.968H66.697V69.75L139.73 163.784C143.149 161.859 146.425 159.734 149.508 157.438Z" fill="#ffffff" />
+          <rect fill="#ffffff" height="72" width="12.7" x="115" y="54" />
+        </g>
+      </svg>
+    )
+  },
+  {
+    name: 'Vue.js',
+    color: '#42b883',
+    svg: (
+      <svg viewBox="0 0 261.76 226.69">
+        <path d="M161.096.001l-30.225 52.351L100.647.001H-.005l130.877 226.688L261.749.001z" fill="#42b883" />
+        <path d="M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z" fill="#35495e" />
+      </svg>
+    )
+  },
+  {
+    name: 'Angular',
+    color: '#dd0031',
+    svg: (
+      <svg viewBox="0 0 250 250" fill="currentColor">
+        <polygon points="125,30 125,30 125,30 31.9,63.2 46.1,186.3 125,230 125,230 125,230 203.9,186.3 218.1,63.2" fill="#dd0031" />
+        <polygon points="125,30 125,52.2 125,52.1 125,153.4 125,153.4 125,230 125,230 203.9,186.3 218.1,63.2" fill="#c3002f" />
+        <path d="M125,52.1 L66.8,182.6 L87,182.6 L98.9,153.4 L151.1,153.4 L163,182.6 L183.2,182.6 L125,52.1 Z M143.4,135.5 L106.6,135.5 L125,91.1 L143.4,135.5 Z" fill="#ffffff" />
+      </svg>
+    )
+  },
+  {
+    name: 'TypeScript',
+    color: '#3178c6',
+    svg: (
+      <svg viewBox="0 0 128 128">
+        <rect width="128" height="128" rx="16" fill="#3178c6" />
+        <path d="M72.9 83.4c2.2 3.5 5.5 5.7 10 5.7 4.1 0 6.8-2 6.8-5 0-3.3-2.7-4.6-7.8-6.8-7.7-3.3-12.8-7.5-12.8-15.5 0-8.6 6.8-15.1 17.1-15.1 7.2 0 12.5 2.5 16.3 8.3l-6.8 4.6c-2.4-3.6-5.1-5.1-9.5-5.1-4.3 0-6.7 2.1-6.7 4.8 0 2.9 2.2 4.2 7.5 6.4 8.7 3.7 13.2 7.7 13.2 16 0 9.8-7.6 15.6-18.1 15.6-8.7 0-14.8-3.2-18.7-9.5l9.5-4.4zM24 57.7h13.9v52.6H49V57.7h13.9V47.5H24v10.2z" fill="#ffffff" />
+      </svg>
+    )
+  },
+  {
+    name: 'Tailwind CSS',
+    color: '#38bdf8',
+    svg: (
+      <svg viewBox="0 0 256 154" fill="currentColor">
+        <path d="M128 0C93.867 0 72.533 17.067 64 51.2 76.8 34.133 91.733 27.733 108.8 32c9.736 2.434 16.697 9.452 24.4 17.218C145.748 61.884 160.852 77.108 192 77.108c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.736-2.434-16.697-9.452-24.4-17.218C174.252 15.224 159.148 0 128 0zM64 76.8C29.867 76.8 8.533 93.867 0 128c12.8-17.067 27.733-23.467 44.8-19.2 9.736 2.434 16.697 9.452 24.4 17.218C81.748 138.684 96.852 153.908 128 153.908c34.133 0 55.467-17.067 64-51.2-12.8 17.067-27.733 23.467-44.8 19.2-9.736-2.434-16.697-9.452-24.4-17.218C110.252 92.024 95.148 76.8 64 76.8z" />
+      </svg>
+    )
+  },
+
+  // Row 2
+  {
+    name: 'Node.js',
+    color: '#539e43',
+    svg: (
+      <svg viewBox="0 0 256 289" fill="currentColor">
+        <path d="M128 0L9.828 68.225v152.55L128 289l118.172-68.225V68.225L128 0zm71.054 186.275l-71.054 41.022-71.054-41.022V104.225l71.054-41.022 71.054 41.022v82.05z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Python',
+    color: '#3776ab',
+    svg: (
+      <svg viewBox="0 0 256 255">
+        <path d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631C-2.58 66.06.023 107.562.023 107.562s-2.603 40.528 41.608 40.528h24.77v-35.035s-.467-41.608 40.906-41.608h62.895s39.351.467 39.351-38.384V.072h-82.637zm-22.793 18.067c6.309 0 11.455 5.146 11.455 11.455 0 6.309-5.146 11.455-11.455 11.455-6.309 0-11.455-5.146-11.455-11.455 0-6.309 5.146-11.455 11.455-11.455z" fill="#3776ab" />
+        <path d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441c44.211 0 41.608-41.502 41.608-41.502s2.603-40.528-41.608-40.528h-24.77v35.035s.467 41.608-40.906 41.608H85.47s-39.351-.467-39.351 38.384v32.99h82.638zm22.793-18.067c-6.309 0-11.455-5.146-11.455-11.455 0-6.309 5.146-11.455 11.455-11.455 6.309 0 11.455 5.146 11.455 11.455 0 6.309-5.146 11.455-11.455 11.455z" fill="#ffd43b" />
+      </svg>
+    )
+  },
+  {
+    name: 'PHP',
+    color: '#777bb3',
+    svg: (
+      <svg viewBox="0 0 256 138" fill="currentColor">
+        <ellipse cx="128" cy="69" rx="128" ry="69" fill="#777bb3" />
+        <path d="M64 96l10-48h22c10 0 16 5 14 15-2 11-10 17-20 17H76l-3 16H64zm15-24h9c6 0 10-3 11-9s-2-8-8-8h-9l-3 17zm48 24l10-48h12l-4 18h1c4-6 10-9 16-9 10 0 15 6 13 16l-5 23h-12l5-22c1-6-2-9-7-9-6 0-10 4-12 11l-4 20h-13zm64 0l10-48h22c10 0 16 5 14 15-2 11-10 17-20 17h-14l-3 16h-9zm15-24h9c6 0 10-3 11-9s-2-8-8-8h-9l-3 17z" fill="#ffffff" />
+      </svg>
+    )
+  },
+  {
+    name: 'Laravel',
+    color: '#ff2d20',
+    svg: (
+      <svg viewBox="0 0 256 264" fill="currentColor">
+        <path d="M239.1 59.2L146.4 6.8c-10.7-6-24-6-34.7 0L17 60.1C6.2 66.2 0 77.2 0 89.4v106.8c0 12.3 6.6 23.7 17.5 29.8l93.7 52.4c10.8 6 24 6 34.8 0l93.1-53.3c10.7-6.1 16.9-17.1 16.9-29.4V88.6c0-12-6.5-23.2-16.9-29.4z" />
+      </svg>
+    )
+  },
+  {
+    name: 'WordPress',
+    color: '#21759b',
+    svg: (
+      <svg viewBox="0 0 256 256" fill="currentColor">
+        <path d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm-11.4 186.2l-37-101.4c6.3-.3 12.2-1 12.2-1 5.6-.7 5-8.9-.7-8.6 0 0-16.9 1.4-27.8 1.4-1.7 0-4.3-.1-7.3-.3C74.3 49 99.6 30.7 128 30.7c28.2 0 53.4 17.8 67.2 43.6-.8 0-1.7-.1-2.6-.1-10.9 0-18.5 9.6-18.5 19.8 0 9.2 5.3 17.1 11.2 26.4 4.6 7.6 10.2 17.5 10.2 31.7 0 7.3-1.3 14.2-3.6 20.4l-31.5-93.8c5.6-.3 10.9-1 10.9-1 5.6-.7 5-8.9-.7-8.6 0 0-16.9 1.4-27.8 1.4-10.9 0-27.8-1.4-27.8-1.4-5.6-.3-6.3 8-.7 8.6 0 0 5.6.7 11.2 1l16.8 46.2-23.8 71.4zm-76.3-58.2c0 23.1 9.6 44 25.1 59l-42-115.2c-5.4 16.8-8.5 34.9-8.5 53.7.1 0 17.4 2.5 25.4 2.5zm118.8 68.3l28-81.2c-1.3 2.3-2.6 4.9-4 7.6l-36.6 106.3c4.3-9.5 8.3-20.7 12.6-32.7zm-40.4 49c-10.9-3.3-20.8-8.6-29.4-15.5l29.4-85.1 29.4 80.5c-8.9 9.9-20.1 16.8-29.4 20.1z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Shopify',
+    color: '#95bf47',
+    svg: (
+      <svg viewBox="0 0 256 291" fill="currentColor">
+        <path d="M219.4 47.9c-.4-1.7-1.9-2.8-3.6-2.5l-29.4 4.5c-4.4-12.8-12.2-24.1-23.7-32.2C145.4 4.7 122.9.8 107.1 7.1c-1.6.6-2.8 1.8-3.4 3.4L81.2 60.8 42.6 73c-2.8.9-4.3 3.8-3.5 6.6L73 227.4c.5 1.9 2 3.3 3.9 3.6l108.6 17.2c.4.1.8.1 1.2.1 2.3 0 4.3-1.6 4.7-3.9l30.9-191.8c.3-1.6-.4-3.3-1.9-4.1l-1-0.6zM128 32.7c13.7 0 26.8 9.4 31.8 24.6l-63.7 9.8 31.9-34.4zm-14.7 92.4l19.5-3.1c1.9 11.7 8.3 17.9 17.8 17.9 7.8 0 13-4.6 13-11.4 0-18.8-30.8-14.9-30.8-37.5 0-14.9 11.2-25.5 27.6-25.5 13.9 0 22.8 6.4 25.4 18.2l-18.7 3.6c-1.6-7-6.2-10.4-12.8-10.4-5.9 0-9.8 3.6-9.8 8.8 0 16.4 30.7 13.2 30.7 37 0 16.4-12.4 27.2-30.2 27.2-17.7 0-29.3-8.8-31.7-24.8z" />
+      </svg>
+    )
+  },
+
+  // Row 3
+  {
+    name: 'HTML5',
+    color: '#e34f26',
+    svg: (
+      <svg viewBox="0 0 256 256">
+        <path d="M23.3 0l19.2 215.3 85.3 23.7 85.7-23.8L232.7 0H23.3zm168.4 69.8H88.4l2.8 31.6h97.7l-7.9 88.5-53 14.7-53.1-14.7-3.7-41.4H103l1.9 21.2 23.1 6.2 23.1-6.2 2.6-28.7H47.4L37.8 37.9h156.7l-2.8 31.9z" fill="#e34f26" />
+      </svg>
+    )
+  },
+  {
+    name: 'CSS3',
+    color: '#1572b6',
+    svg: (
+      <svg viewBox="0 0 256 256">
+        <path d="M23.3 0l19.2 215.3 85.3 23.7 85.7-23.8L232.7 0H23.3zm168.4 69.8H88.4l2.8 31.6h97.7l-7.9 88.5-53 14.7-53.1-14.7-3.7-41.4H103l1.9 21.2 23.1 6.2 23.1-6.2 2.6-28.7H47.4L37.8 37.9h156.7l-2.8 31.9z" fill="#1572b6" />
+      </svg>
+    )
+  },
+  {
+    name: 'JavaScript',
+    color: '#f7df1e',
+    svg: (
+      <svg viewBox="0 0 256 256">
+        <rect width="256" height="256" rx="16" fill="#f7df1e" />
+        <path d="M67.3 213c14.2 0 23.7-7.9 23.7-22.3V103.9h-19.3v85.8c0 4.7-2.6 6.8-6.3 6.8-3.4 0-6.1-1.6-8.2-4.5l-12.6 11.8C49.9 209.6 57.8 213 67.3 213zm91.8-1.3c23.2 0 37.9-12.4 37.9-31.3 0-19.7-14.2-26.6-32.9-33.4-12.4-4.5-17.6-8.4-17.6-15.5 0-6.3 5.3-10.8 14.2-10.8 8.4 0 14.2 3.4 18.4 9.2l13.7-10.5c-7.6-10-18.7-14.7-32.1-14.7-20.8 0-34.7 12.9-34.7 30 0 18.2 12.9 25.8 31.6 32.6 13.9 5.3 19.2 9.2 19.2 16.6 0 7.4-6.6 12.1-16.6 12.1-11.3 0-18.7-4.7-23.7-13.4l-14.2 10.3c7.6 13.1 21.3 20.2 36.8 20.2z" fill="#000000" />
+      </svg>
+    )
+  },
+  {
+    name: 'WooCommerce',
+    color: '#96588a',
+    svg: (
+      <svg viewBox="0 0 256 153" fill="currentColor">
+        <path d="M228.4 0H27.6C12.4 0 0 12.4 0 27.6v74.6c0 15.2 12.4 27.6 27.6 27.6h157.9l46.1 23.2-10.7-23.2h7.5c15.2 0 27.6-12.4 27.6-27.6V27.6C256 12.4 243.6 0 228.4 0zM61.9 98.7L42.5 40.5h16.2l12.4 43.1L82 40.5h15.9l12.4 43.1 12.4-43.1h15.9l-19.4 58.2h-17.2l-11.6-39.8-11.6 39.8H61.9zm84.5-2.2c-15.9 0-26.5-12.7-26.5-27.4s10.6-27.4 26.5-27.4 26.5 12.7 26.5 27.4-10.6 27.4-26.5 27.4zm54.3 0c-15.9 0-26.5-12.7-26.5-27.4s10.6-27.4 26.5-27.4 26.5 12.7 26.5 27.4-10.6 27.4-26.5 27.4z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Bootstrap',
+    color: '#7952b3',
+    svg: (
+      <svg viewBox="0 0 256 205" fill="currentColor">
+        <path d="M226.3 32.8C206.5 5.5 168.9 0 128 0 87.1 0 49.5 5.5 29.7 32.8 10 59.8 8.1 101.4 8.1 102.5c0 1.1 1.9 42.7 21.6 69.7 19.8 27.3 57.4 32.8 98.3 32.8s78.5-5.5 98.3-32.8c19.7-27 21.6-68.6 21.6-69.7 0-1.1-1.9-42.7-21.6-69.7zm-87.7 122.9H94.1V49.3h43.3c17.5 0 27.9 8.2 27.9 22.8 0 10.3-6.2 18.5-15.7 21.3 12.2 2.5 19.7 11.9 19.7 24.3-.1 17.5-12.7 28-30.7 28zm-22.1-66.2v20.4h18.2c7.5 0 12.2-4.1 12.2-10.3 0-6.1-4.7-10.1-12.2-10.1h-18.2zm0 31.9v23.5h20.6c8.4 0 13.5-4.4 13.5-11.7s-5.1-11.8-13.5-11.8h-20.6z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Express.js',
+    color: '#ffffff',
+    svg: (
+      <svg viewBox="0 0 256 256" fill="currentColor">
+        <path d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm68 152h-24v-16h24v16zm0-32h-24v-16h24v16zm-48 48h-24V88h24v80zm-40-16h-24v-16h24v16zm0-32h-24v-16h24v16z" />
+      </svg>
+    )
+  },
+
+  // Row 4
+  {
+    name: 'MySQL',
+    color: '#00758f',
+    svg: (
+      <svg viewBox="0 0 256 256" fill="currentColor">
+        <path d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm54 184c-28 18-68 16-96-4-18-13-26-34-22-54 4-22 22-38 44-42 22-4 44 4 58 20 8 9 12 20 12 32 0 18-12 34-30 40-14 5-30 2-42-8l8-10c8 6 18 8 28 5 12-4 20-14 20-27 0-8-3-16-9-22-10-11-26-17-42-14-16 3-30 15-32 31-3 15 3 30 16 40 22 16 54 18 76 3l10 10z" />
+      </svg>
+    )
+  },
+  {
+    name: 'PostgreSQL',
+    color: '#336791',
+    svg: (
+      <svg viewBox="0 0 256 264" fill="currentColor">
+        <path d="M127.3 0C58 0 10.4 46.8 2.2 112.5c-.8 6.4-.3 13 .3 19.4 6.8 72 63.8 127.8 135 128.1 40 .2 77.2-16.7 102.5-45.7 3.3-3.8 2.8-9.5-.9-12.7-3.7-3.2-9.4-2.8-12.6.9-22.3 25.5-55 40.2-90.2 40-62.5-.3-112.6-49.1-118.6-112.1-.5-5.6-.9-11.4-.2-16.9C24.4 56.4 66.8 16 127.3 16c62.6 0 113.6 49.9 114.7 112.5.1 6.8-.7 13.6-2.1 20.2-1.1 5.2 2.3 10.3 7.5 11.4 5.2 1.1 10.3-2.3 11.4-7.5 1.7-8 2.6-16.2 2.5-24.4C260.1 54.4 200.4 0 127.3 0z" />
+      </svg>
+    )
+  },
+  {
+    name: 'MongoDB',
+    color: '#47a248',
+    svg: (
+      <svg viewBox="0 0 256 550" fill="currentColor">
+        <path d="M128 0C121.6 30.6 86 103.5 68.8 138.8 33.7 210.8 11.3 294.3 35.8 375.4c21.2 70.3 75.9 126.9 92.2 174.6 16.3-47.7 71-104.3 92.2-174.6 24.5-81.1 2.1-164.6-33-236.6C170 103.5 134.4 30.6 128 0z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Redis',
+    color: '#dc382d',
+    svg: (
+      <svg viewBox="0 0 256 220" fill="currentColor">
+        <path d="M0 64.9L128 0l128 64.9-128 64.9L0 64.9zm0 45l128 64.9 128-64.9v45L128 220 0 154.9v-45z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Firebase',
+    color: '#ffa000',
+    svg: (
+      <svg viewBox="0 0 256 353">
+        <path d="M38.5 186.2L1.1 254.6c-2.3 4.2-.6 9.4 3.7 11.6 1.3.7 2.8 1 4.3 1 2.4 0 4.8-.9 6.6-2.6L68 214.2l-29.5-28z" fill="#ffa000" />
+        <path d="M123.6 137.9L87.4 69.3c-2.2-4.2-7.4-5.8-11.6-3.6-2.1 1.1-3.7 3-4.4 5.2L42.5 180.2l81.1-42.3z" fill="#f57c00" />
+        <path d="M136.2 348.6c4.9 2.7 10.9 2.7 15.8 0l98.9-55.6c4.8-2.7 7.7-7.8 7.7-13.3 0-2.3-.6-4.6-1.7-6.7L189.6 15.2c-2.3-4.2-7.5-5.8-11.7-3.5-2.2 1.2-3.8 3.1-4.5 5.4L136.2 348.6z" fill="#ffca28" />
+      </svg>
+    )
+  },
+  {
+    name: 'Supabase',
+    color: '#3ecf8e',
+    svg: (
+      <svg viewBox="0 0 256 264" fill="currentColor">
+        <path d="M141.7 263.3c-5.5 6.7-16.2 2.8-16.2-5.9V157.9h95.9c13.7 0 21.2 15.9 12.3 26.3L141.7 263.3zM114.3.7c5.5-6.7 16.2-2.8 16.2 5.9v105.5H34.6c-13.7 0-21.2-15.9-12.3-26.3L114.3.7z" />
+      </svg>
+    )
+  },
+
+  // Row 5
+  {
+    name: 'AWS',
+    color: '#ff9900',
+    svg: (
+      <svg viewBox="0 0 256 154" fill="currentColor">
+        <path d="M138.8 91.5c-15.8 11.6-38.8 17.8-58.7 17.8-27.9 0-53-10.2-72-27.4-1.5-1.4-1.7-3.7-.3-5.2.7-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.1 17.7 15.8 41.2 25.1 66.7 25.1 18.5 0 39.7-5.5 54.8-16.1 2.3-1.6 5.5-1 7.1 1.3 1.6 2.4 1 5.6-1.3 7.1l-1.9 1.5zm10.7-5.5c-2-2.6-10.8-.9-15.3-.2-1.4.2-1.7-1.1-.5-1.9 7.6-5.4 20-3.8 22.3-.9 2.2 2.9-.6 15.2-7.7 21.2-1.1.9-2.2.4-1.7-1 1.7-4.4 4.8-14.7 2.9-17.2zM62.5 73.1H50.9L36.3 22.5h11.9l9.3 36.8 9.2-36.8h11.9L62.5 73.1zm53.4 0h-11.6l-14.6-50.6h11.9l9.3 36.8 9.2-36.8h11.9l-16.1 50.6zm54.3-3.6c-7.4 3.7-16.2 5.5-24.9 5.5-13.2 0-22.3-5.5-22.3-17.3 0-13.9 12.1-18.7 25.9-19.4 6-.3 12.1-.2 17.8.4v-4.1c0-5.7-3.5-8.8-12.7-8.8-6.9 0-14.1 2.2-20.1 5.9-1.3.8-2.9.4-3.7-.8l-3.3-4.8c-.8-1.2-.5-2.8.7-3.6 7.6-4.9 17.6-7.7 27.6-7.7 17.6 0 25.6 7.7 25.6 22.7v28.8c0 3.3.7 5.6 1.7 7.7.7 1.3.2 2.9-1 3.6l-7.3 4.3c-1.3.8-3 .4-3.7-.8-.7-1.4-1.3-3.3-1.6-5.7zm-3.6-18.3c-4.7-.5-9.8-.7-14.9-.5-7.7.5-14.4 2.9-14.4 9.9 0 5.8 4.2 8.7 11.7 8.7 5.7 0 12.2-1.5 17.6-4.5V51.2z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Google Cloud',
+    color: '#4285f4',
+    svg: (
+      <svg viewBox="0 0 256 206" fill="currentColor">
+        <path d="M197.6 77.3c-4.2-28.5-28.8-50.3-58.6-50.3-17.6 0-33.3 7.6-44.3 19.8-7.9-6.3-17.9-10-28.7-10C41.2 36.8 21 57 21 81.8c0 3.2.3 6.3 1 9.3C9.1 98.7 0 113.2 0 129.8 0 152 18 170 40.2 170h155.4c33.3 0 60.4-27.1 60.4-60.4 0-30.8-23.1-56.3-53-59.8l-5.4-.5z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Docker',
+    color: '#2496ed',
+    svg: (
+      <svg viewBox="0 0 256 189" fill="currentColor">
+        <path d="M251.8 82.6c-4.5-3.3-14.4-7.2-28.3-4.2-2.1-13.8-12.7-25.2-26.9-27.4l-4.1-.6-.8 4.1c-1.4 7.6-.2 18.2 4.6 25-14.4 8.7-36.9 8.2-39.6 8.1H3.6C1.6 92.5 0 97.9 0 103.5c0 15.6 5.8 30.6 16.5 41.3C35.2 163.5 73.4 189 128 189c84.5 0 126.9-46.7 127.8-47.7 1.3-1.4 1.8-3.3 1.4-5.2-2-12.1-1.6-32.9-5.4-53.5zM27 67h21v21H27V67zm27 0h21v21H54V67zm27 0h21v21H81V67zm27 0h21v21h-21V67zm27 0h21v21h-21V67zm-81-27h21v21H54V40zm27 0h21v21H81V40zm27 0h21v21h-21V40zm0-27h21v21h-21V13z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Kubernetes',
+    color: '#326ce5',
+    svg: (
+      <svg viewBox="0 0 256 250" fill="currentColor">
+        <path d="M128 0L17.7 63.7v122.6L128 250l110.3-63.7V63.7L128 0zm0 30.8l82.7 47.7v95.5L128 221.7l-82.7-47.7V78.5L128 30.8zm-11 38.3v27.2l22 0V69.1l-22 0zm-44.4 25.6l19.2 19.2 15.6-15.6-19.2-19.2-15.6 15.6zm110.8 0l-15.6 15.6 19.2 19.2 15.6-15.6-19.2-19.2zm-73.6 22.8c-15.2 0-27.5 12.3-27.5 27.5s12.3 27.5 27.5 27.5 27.5-12.3 27.5-27.5-12.3-27.5-27.5-27.5z" />
+      </svg>
+    )
+  },
+  {
+    name: 'GitHub',
+    color: '#f0f6fc',
+    svg: (
+      <svg viewBox="0 0 256 250" fill="currentColor">
+        <path d="M128 0C57.3 0 0 57.3 0 128c0 56.5 36.7 104.5 87.5 121.5 6.4 1.2 8.7-2.8 8.7-6.2 0-3.1-.1-11.2-.2-22-35.6 7.7-43.1-17.2-43.1-17.2-5.8-14.8-14.2-18.7-14.2-18.7-11.6-7.9.9-7.8.9-7.8 12.8.9 19.6 13.2 19.6 13.2 11.4 19.6 29.9 13.9 37.2 10.6 1.2-8.3 4.5-13.9 8.2-17.1-28.4-3.2-58.3-14.2-58.3-63.2 0-14 5-25.4 13.2-34.4-1.3-3.2-5.7-16.2 1.3-33.9 0 0 10.7-3.4 35.1 13.1 10.2-2.8 21.1-4.3 32-4.3 10.8 0 21.8 1.4 32 4.3 24.3-16.6 35-13.1 35-13.1 7.1 17.7 2.7 30.7 1.3 33.9 8.2 9 13.2 20.5 13.2 34.4 0 49.1-29.9 59.9-58.4 63.1 4.6 4 8.7 11.8 8.7 23.8 0 17.2-.2 31-.2 35.3 0 3.4 2.3 7.5 8.8 6.2 50.8-17 87.4-65 87.4-121.5C256 57.3 198.7 0 128 0z" />
+      </svg>
+    )
+  },
+  {
+    name: 'Vercel',
+    color: '#ffffff',
+    svg: (
+      <svg viewBox="0 0 256 222" fill="currentColor">
+        <path d="M128 0l128 221.7H0z" />
+      </svg>
+    )
+  }
+];
+
 export default function WebDevTechStack() {
-  const techCategories = [
-    {
-      category: 'FRONTEND',
-      items: [
-        { name: 'HTML5', logo: html5Icon },
-        { name: 'CSS3', logo: css3Icon },
-        { name: 'JavaScript (ES6+)', logo: jsIcon },
-        { name: 'React.js', logo: reactIcon },
-        { name: 'Next.js', logo: nextIcon },
-        { name: 'Tailwind CSS', iconClass: 'fa-brands fa-css3-alt' },
-      ],
-    },
-    {
-      category: 'BACKEND',
-      items: [
-        { name: 'Node.js', logo: nodeIcon },
-        { name: 'Express.js', iconClass: 'fa-solid fa-server' },
-        { name: 'Laravel', logo: laravelIcon },
-        { name: 'Python', iconClass: 'fa-brands fa-python' },
-        { name: 'Django', iconClass: 'fa-solid fa-code' },
-        { name: 'PHP', logo: phpIcon },
-      ],
-    },
-    {
-      category: 'DATABASES',
-      items: [
-        { name: 'MongoDB', iconClass: 'fa-solid fa-leaf' },
-        { name: 'MySQL', logo: mysqlIcon },
-        { name: 'PostgreSQL', iconClass: 'fa-solid fa-database' },
-        { name: 'Firebase', logo: firebaseIcon },
-        { name: 'Redis', iconClass: 'fa-solid fa-memory' },
-      ],
-    },
-    {
-      category: 'CMS & PLATFORMS',
-      items: [
-        { name: 'WordPress', iconClass: 'fa-brands fa-wordpress' },
-        { name: 'Shopify', iconClass: 'fa-brands fa-shopify' },
-        { name: 'Webflow', iconClass: 'fa-solid fa-globe' },
-        { name: 'Strapi', iconClass: 'fa-solid fa-cubes' },
-        { name: 'Wix', iconClass: 'fa-solid fa-w' },
-      ],
-    },
-    {
-      category: 'CLOUD & DEVOPS',
-      items: [
-        { name: 'AWS', iconClass: 'fa-brands fa-aws' },
-        { name: 'Google Cloud', iconClass: 'fa-brands fa-google' },
-        { name: 'Docker', iconClass: 'fa-brands fa-docker' },
-        { name: 'GitHub', iconClass: 'fa-brands fa-github' },
-        { name: 'Vercel', iconClass: 'fa-solid fa-triangle-circle-square' },
-      ],
-    },
-  ];
-
   return (
-    <section className="webdev-tech-section">
+    <section className="webdev-tech-section" id="technologies">
       <Container>
-        <div className="webdev-tech-card">
-          <div className="webdev-tech-header">
-            <h2>Technologies We Use for Website Development</h2>
+        <div className="webdev-tech-header">
+          <div className="webdev-tech-eyebrow-wrapper">
+            <span className="webdev-tech-eyebrow-line left" aria-hidden="true"></span>
+            <span className="webdev-tech-eyebrow">TECH STACK</span>
+            <span className="webdev-tech-eyebrow-line right" aria-hidden="true"></span>
           </div>
 
-          <div className="webdev-tech-columns">
-            {techCategories.map((cat, idx) => (
-              <div key={idx} className="webdev-tech-column">
-                <div className="webdev-tech-cat-header">
-                  <span className="webdev-tech-cat-title">{cat.category}</span>
-                </div>
-                <div className="webdev-tech-list">
-                  {cat.items.map((item, itemIdx) => (
-                    <div key={itemIdx} className="webdev-tech-item">
-                      <div className="webdev-tech-icon-box">
-                        {item.logo ? (
-                          <img
-                            src={item.logo}
-                            alt={item.name}
-                            className="webdev-tech-logo-img"
-                            width="32"
-                            height="32"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <i className={item.iconClass || 'fa-solid fa-code'}></i>
-                        )}
-                      </div>
-                      <span className="webdev-tech-name">{item.name}</span>
-                    </div>
-                  ))}
-                </div>
+          <h2 className="webdev-tech-title">
+            Technology <span className="webdev-tech-accent">Stack</span>
+          </h2>
+
+          <p className="webdev-tech-subtitle">
+            40+ technologies and frameworks to build scalable, performant, and future-proof solutions.
+          </p>
+        </div>
+
+        <div className="webdev-tech-grid">
+          {techStackList.map((tech, idx) => (
+            <div key={idx} className="webdev-tech-tile" title={tech.name}>
+              <div
+                className="webdev-tech-tile-icon"
+                style={{ color: tech.color }}
+                aria-hidden="true"
+              >
+                {tech.svg}
               </div>
-            ))}
-          </div>
+              <h3 className="webdev-tech-tile-name">{tech.name}</h3>
+            </div>
+          ))}
         </div>
       </Container>
     </section>

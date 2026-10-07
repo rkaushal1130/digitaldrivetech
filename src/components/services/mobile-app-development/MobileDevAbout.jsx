@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import { Smartphone, Gauge, Layout, ShieldCheck } from 'lucide-react';
 import logoImage from '../../../assets/icons/logo.png';
@@ -51,7 +52,11 @@ export default function MobileDevAbout() {
               <div className="mobiledev-about-header">
                 <span className="mobiledev-about-eyebrow">ABOUT OUR MOBILE APP DEVELOPMENT SERVICES</span>
                 <p className="mobiledev-about-intro">
-                  We build custom mobile applications that are fast, secure, scalable, and tailored to your business needs. From idea to launch, we turn your vision into a powerful mobile experience.
+                  We build custom mobile applications that are fast, secure, scalable, and tailored to your business needs. Together with our{' '}
+                  <Link to="/website-development" className="mobiledev-inline-link" title="Website Development Services">
+                    website development
+                  </Link>{' '}
+                  solutions, we turn your vision into a powerful digital experience from idea to launch.
                 </p>
               </div>
 

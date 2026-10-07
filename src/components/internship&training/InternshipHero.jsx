@@ -13,8 +13,8 @@ export default function InternshipHero() {
           <div className="internship-hero-content">
             <p className="internship-hero-tag">Industrial Training & Internship Program</p>
             <h1>
-              Learn. Implement.<br />
-              <span className="gradient-text">Lead Your Future.</span>
+              Internship &amp; Training<br />
+              <span className="gradient-text">in Mohali</span>
             </h1>
             <p className="internship-hero-desc">
               Gain practical skills by working on live projects and real-time scenarios

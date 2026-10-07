@@ -34,6 +34,32 @@
   border-radius: 2px;
 }
 
+.webdev-process-intro {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.65;
+  max-width: 820px;
+  margin: 18px auto 0;
+  font-weight: 500;
+}
+
+.webdev-process-inline-link {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.webdev-process-inline-link:hover {
+  color: #1d4ed8;
+}
+
+.webdev-process-cta {
+  margin-top: 40px;
+  text-align: center;
+}
+
 .webdev-process-timeline {
   display: grid;
   grid-template-columns: repeat(6, 1fr);

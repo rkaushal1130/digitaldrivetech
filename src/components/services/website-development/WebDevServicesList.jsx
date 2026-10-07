@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import Button from '../../ui/Button';
 import {
@@ -14,8 +14,6 @@ import {
 import './WebDevServicesList.css';
 
 export default function WebDevServicesList() {
-  const navigate = useNavigate();
-
   const services = [
     {
       id: 1,
@@ -23,7 +21,7 @@ export default function WebDevServicesList() {
       title: 'Custom Website Development',
       description: (
         <>
-          Get a website built around your brand, business goals and customer requirements instead of relying on a generic template. Our custom website development approach provides flexibility for future growth and new features.
+          We engineer tailored websites designed around your unique business workflows, audience needs and brand identity. Our custom frontend and backend architecture eliminates template bloat, improving page speed and long-term maintainability.
         </>
       )
     },
@@ -33,17 +31,17 @@ export default function WebDevServicesList() {
       title: 'E-commerce Website Development',
       description: (
         <>
-          Build an online store with product management, shopping cart, secure checkout and payment integration. We create e-commerce websites designed to provide a smooth shopping experience across desktop and mobile devices.
+          Build a dependable online store with customized catalog browsing, intuitive shopping carts, secure payment gateway integrations and order management optimized for desktop and mobile shoppers.
         </>
       )
     },
     {
       id: 3,
       icon: <Globe2 size={26} />,
-      title: 'WordPress Website Development',
+      title: 'CMS & WordPress Development',
       description: (
         <>
-          Professional WordPress websites with a flexible content structure, responsive design and SEO-friendly implementation. Suitable for businesses that need an easy-to-manage website.
+          Structured WordPress and content management systems featuring intuitive administration dashboards, flexible layout controls, responsive design and clean semantic code for effortless content publishing.
         </>
       )
     },
@@ -53,11 +51,11 @@ export default function WebDevServicesList() {
       title: 'Responsive Website Development',
       description: (
         <>
-          We build mobile-friendly websites that adapt to smartphones, tablets, laptops and desktop screens while maintaining usability and a consistent{' '}
+          Mobile-first website development ensuring fast rendering, intuitive touch interactions, and consistent visual layouts that deliver a seamless{' '}
           <Link to="/ui-ux-design" title="UI/UX Design Services" className="webdev-inline-link">
             user experience
-          </Link>
-          .
+          </Link>{' '}
+          across smartphones, tablets and desktops.
         </>
       )
     },
@@ -70,7 +68,7 @@ export default function WebDevServicesList() {
           <Link to="/software-development" title="Software & Web Application Development" className="webdev-inline-link">
             Custom web applications
           </Link>{' '}
-          and business portals designed around specific workflows, functionality and business requirements.
+          and business portals engineered with scalable databases, secure authentication and API integrations to streamline internal processes.
         </>
       )
     },
@@ -80,7 +78,7 @@ export default function WebDevServicesList() {
       title: 'Website Redesign & Maintenance',
       description: (
         <>
-          Improve an outdated website with a modern responsive interface, better usability and technical improvements while maintaining the existing business content and SEO considerations where possible.
+          Revitalize an outdated web presence with modern responsive layouts, faster loading speeds, security updates and technical SEO improvements while preserving your established content and brand reputation.
         </>
       )
     }
@@ -113,7 +111,7 @@ export default function WebDevServicesList() {
         </div>
 
         <div className="webdev-services-list-cta">
-          <Button onClick={() => navigate('/contact')}>
+          <Button to="/contact">
             Discuss Your Website Project <ArrowRight size={18} style={{ marginLeft: '8px', verticalAlign: 'middle' }} />
           </Button>
         </div>

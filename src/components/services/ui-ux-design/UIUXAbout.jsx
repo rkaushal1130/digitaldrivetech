@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import { Search, LayoutGrid, Paintbrush, Users, Play, Layers, Smartphone, Globe } from 'lucide-react';
 import logoImage from '../../../assets/icons/logo.png';
@@ -52,7 +53,14 @@ export default function UIUXAbout() {
       id: 8,
       icon: <Globe size={28} />,
       title: 'Website UI',
-      description: 'We design modern, responsive and conversion-focused website interfaces.',
+      description: (
+        <>
+          We design modern, responsive and conversion-focused interfaces ready for seamless{' '}
+          <Link to="/website-development" className="uiux-inline-link" title="Website Development Services">
+            website development
+          </Link>.
+        </>
+      ),
     },
   ];
 

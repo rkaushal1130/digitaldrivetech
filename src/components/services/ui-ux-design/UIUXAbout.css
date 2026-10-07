@@ -125,6 +125,18 @@
   line-height: 1.5;
 }
 
+.uiux-inline-link {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.uiux-inline-link:hover {
+  color: #1d4ed8;
+}
+
 @media (max-width: 992px) {
   .uiux-about-grid {
     grid-template-columns: 1fr;

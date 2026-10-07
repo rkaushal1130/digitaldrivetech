@@ -57,6 +57,14 @@ footer {
     padding: 4px 0;
 }
 
+.footer-nav-link {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
 .footer-grid li[style*="cursor: pointer"]:hover {
     color: #3b82f6;
     text-shadow: 0 0 10px rgba(59, 130, 246, 0.6), 0 0 20px rgba(59, 130, 246, 0.4);

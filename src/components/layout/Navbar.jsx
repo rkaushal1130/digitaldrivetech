@@ -120,7 +120,7 @@ export default function Navbar() {
               <li><button onClick={handleTechnologiesClick} className={`nav-button ${location.pathname === '/technologies' ? 'active' : ''}`}>Technologies</button></li>
               <li><button onClick={handlePricingClick} className={`nav-button ${location.pathname === '/pricing' ? 'active' : ''}`}>Pricing</button></li>
               <li><button onClick={handleContactClick} className={`nav-button ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</button></li>
-              <li><button onClick={() => { navigate('/internship-training'); window.scrollTo(0, 0); setIsMobileMenuOpen(false); }} className={`nav-button ${location.pathname === '/internship-training' ? 'active' : ''}`}>Internship &amp; Training</button></li>
+              <li><button onClick={() => { navigate('/internship-training-in-mohali'); window.scrollTo(0, 0); setIsMobileMenuOpen(false); }} className={`nav-button ${location.pathname === '/internship-training-in-mohali' || location.pathname === '/internship-training' ? 'active' : ''}`}>Internship &amp; Training</button></li>
             </ul>
 
             <Button onClick={handleContactClick} className="desktop-cta">Get a Free Quote</Button>
@@ -152,7 +152,7 @@ export default function Navbar() {
               <li><button onClick={handleTechnologiesClick} className={`nav-button ${location.pathname === '/technologies' ? 'active' : ''}`}>Technologies</button></li>
               <li><button onClick={handlePricingClick} className={`nav-button ${location.pathname === '/pricing' ? 'active' : ''}`}>Pricing</button></li>
               <li><button onClick={handleContactClick} className={`nav-button ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</button></li>
-              <li><button onClick={() => { navigate('/internship-training'); window.scrollTo(0, 0); setIsMobileMenuOpen(false); }} className={`nav-button ${location.pathname === '/internship-training' ? 'active' : ''}`}>Internship &amp; Training</button></li>
+              <li><button onClick={() => { navigate('/internship-training-in-mohali'); window.scrollTo(0, 0); setIsMobileMenuOpen(false); }} className={`nav-button ${location.pathname === '/internship-training-in-mohali' || location.pathname === '/internship-training' ? 'active' : ''}`}>Internship &amp; Training</button></li>
             </ul>
             <div className="mobile-cta-wrapper">
               <Button onClick={handleContactClick} className="mobile-cta">Get a Free Quote</Button>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import './PricingPlans.css';
 
@@ -61,7 +62,13 @@ export default function PricingPlans() {
         <div className="pricing-plans-header">
           <div className="section-tag">Our Pricing Plans</div>
           <h2 className="section-title">Affordable Plans, Premium Results</h2>
-          <p className="section-description">No hidden charges. Pay for what you need.</p>
+          <p className="section-description">
+            Transparent pricing for professional{' '}
+            <Link to="/website-development" className="pricing-inline-link" title="Website Development Services">
+              website development
+            </Link>{' '}
+            and digital solutions. No hidden charges.
+          </p>
         </div>
         <div className="pricing-plans-grid">
           {plansData.map((plan) => (

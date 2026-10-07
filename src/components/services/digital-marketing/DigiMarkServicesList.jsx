@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import Button from '../../ui/Button';
 import { Search, MousePointer, Share2, Sparkles, ArrowRight } from 'lucide-react';
@@ -50,7 +50,15 @@ export default function DigiMarkServicesList() {
           <div className="digimark-services-tag">OUR DIGITAL MARKETING SERVICES</div>
           <h2 className="digimark-services-title">Here are our digital marketing services:</h2>
           <p className="digimark-services-subtitle">
-            At Digital Drive Resource Tech Private Limited (DigitalDriveTech), we provide digital marketing services that are designed to increase online visibility, reach the right audience, and support business growth.
+            At Digital Drive Resource Tech Private Limited (DigitalDriveTech), we provide digital marketing services designed to increase online visibility, reach the right audience, and support business growth through{' '}
+            <Link
+              to="/website-development"
+              style={{ color: '#38bdf8', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+              title="SEO-friendly Website Development Services"
+            >
+              SEO-friendly website development
+            </Link>{' '}
+            and targeted digital campaigns.
           </p>
         </div>
 

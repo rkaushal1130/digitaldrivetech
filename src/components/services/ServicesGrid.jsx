@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import * as LucideIcons from 'lucide-react';
 import './ServicesGrid.css';
@@ -9,7 +9,8 @@ const servicesData = [
     id: 1,
     icon: 'Monitor',
     title: 'Website Development',
-    path: '/services/website-development',
+    path: '/website-development',
+    titleAttr: 'Website Development Services',
     description: 'We build modern, responsive and SEO-friendly websites that help you build a strong online presence and grow your business.',
   },
   {
@@ -79,17 +80,29 @@ export default function ServicesGrid() {
                 <div className="services-section-icon">
                   {Icon ? <Icon size={24} /> : service.icon}
                 </div>
-                <h3>{service.title}</h3>
+                <h3>
+                  <Link
+                    to={service.path}
+                    className="services-card-title-link"
+                    title={service.titleAttr || `${service.title} Services`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                    }}
+                  >
+                    {service.title}
+                  </Link>
+                </h3>
                 <p>{service.description}</p>
-                <button
+                <Link
+                  to={service.path}
                   className="services-section-link"
+                  title={service.titleAttr || `${service.title} Services`}
                   onClick={(e) => {
                     e.stopPropagation();
-                    handleCardClick(service.path);
                   }}
                 >
                   Learn More →
-                </button>
+                </Link>
               </div>
             );
           })}

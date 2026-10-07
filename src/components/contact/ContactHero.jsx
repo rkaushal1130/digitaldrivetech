@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import './ContactHero.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 //import heroImage from '../../assets/images/ContactHero.webp';
 export default function ContactHero() {
   const navigate = useNavigate();
@@ -12,9 +12,17 @@ export default function ContactHero() {
         <div className="contact-hero-inner">
           <div className="contact-hero-text">
             <div className="contact-eyebrow">CONTACT US</div>
-            <h1>Let's Build Something <span>Amazing</span> Together</h1>
+            <h1>Contact <span>Us</span></h1>
             <p>
-              We're here to help and answer any question you might have. We look forward to hearing from you!
+              Looking to discuss{' '}
+              <Link
+                to="/website-development"
+                style={{ color: '#60a5fa', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+                title="Website Development Services in Mohali"
+              >
+                website development
+              </Link>
+              , mobile apps, or custom digital solutions? We're here to help and answer any questions you might have.
             </p>
             <div className="contact-hero-btns">
               <Button onClick={() => navigate('/contact#contact-form')}>Get Free Quote</Button>

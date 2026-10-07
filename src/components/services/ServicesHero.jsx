@@ -14,7 +14,7 @@ export default function ServicesHero() {
         <div className="services-hero-grid">
           <div className="services-hero-content">
             <span className="services-eyebrow">Our Services</span>
-            <h1>Powerful Solutions For Your Business</h1>
+            <h1>Web, App &amp; <span>Digital Solutions</span></h1>
             <p>
               We deliver innovative, reliable and scalable digital solutions that help businesses grow, automate
               and succeed in the digital world.

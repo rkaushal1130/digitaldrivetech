@@ -125,6 +125,18 @@
   line-height: 1.5;
 }
 
+.softdev-inline-link {
+  color: #1e3a8a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.softdev-inline-link:hover {
+  color: #2563eb;
+}
+
 @media (max-width: 992px) {
   .softdev-about-grid {
     grid-template-columns: 1fr;

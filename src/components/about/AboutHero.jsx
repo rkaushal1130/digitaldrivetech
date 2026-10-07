@@ -3,7 +3,7 @@ import Container from '../ui/Container';
 import Button from '../ui/Button';
 //import officeImage from '../../assets/images/Office.webp';
 import './AboutHero.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { Users, Target, Lightbulb, ShieldCheck } from 'lucide-react';
 
 export default function AboutHero() {
@@ -18,8 +18,15 @@ export default function AboutHero() {
               Digital <span className="accent">Solutions</span> Company in Mohali
             </h1>
             <p>
-              Digital Drive Resource Tech Private Limited is a full-service digital company that helps businesses go online with powerful
-              websites, mobile apps and software solutions. We combine creativity, technology and strategy to
+              Digital Drive Resource Tech Private Limited is a full-service digital company that helps businesses go online with powerful{' '}
+              <Link
+                to="/website-development"
+                style={{ color: '#60a5fa', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+                title="Website Development Company in Mohali"
+              >
+                website development
+              </Link>
+              , mobile apps and software solutions. We combine creativity, technology and strategy to
               deliver measurable results.
             </p>
             <div className="hero-actions">

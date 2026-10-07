@@ -218,6 +218,7 @@
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 35px rgba(37, 99, 235, 0.3);
   max-width: 520px;
   width: 100%;
+  aspect-ratio: 520 / 420;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   background: #0f172a;
 }
@@ -231,6 +232,7 @@
 .webdev-hero-right-img {
   width: 100%;
   height: auto;
+  aspect-ratio: 520 / 420;
   display: block;
   object-fit: cover;
   border-radius: 24px;

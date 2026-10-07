@@ -39,6 +39,16 @@
     margin-bottom: 15px;
 }
 
+.service-title-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.service-title-link:hover {
+    color: #3b82f6;
+}
+
 .service-card p {
     color: #cbd5e1;
     line-height: 1.7;

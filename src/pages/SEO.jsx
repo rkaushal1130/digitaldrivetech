@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import SEOHead from '../components/common/SEOHead';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
@@ -107,8 +107,19 @@ export default function SEO() {
       name: 'Technical SEO',
       icon: <Code2 size={26} />,
       badge: 'Architecture & Speed',
-      description:
-        'We improve the technical aspects of your website so that it helps search engines crawl, understand, and index your website properly.',
+      description: (
+        <>
+          We improve the technical architecture of your website and{' '}
+          <Link
+            to="/website-development"
+            style={{ color: '#38bdf8', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+            title="Technical Website Development Services"
+          >
+            website development
+          </Link>{' '}
+          structure so that search engines can crawl, understand, and index your content properly.
+        </>
+      ),
     },
     {
       id: 4,

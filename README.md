@@ -72,3 +72,17 @@ src/
 - `/technologies` Technologies
 - `/pricing` Pricing
 - `/contact` Contact
+- `/website-development` Website Development
+- `/blog` Blog & Resources
+
+## Google Search Console Setup
+
+Follow these steps to configure and monitor the production website in Google Search Console:
+
+1. Open [Google Search Console](https://search.google.com/search-console).
+2. Add and verify the production property: `https://www.digitaldrivetech.com/` (using DNS TXT record or HTML tag provided by Google).
+3. Submit the production sitemap: `https://www.digitaldrivetech.com/sitemap.xml`.
+4. Use the **URL Inspection** tool for priority page:
+   `https://www.digitaldrivetech.com/website-development`
+5. Test Live URL to confirm clean rendering, mobile usability, and structured data detection, then click **Request Indexing**.
+6. Periodically monitor the **Page Indexing**, **Core Web Vitals**, and **Enhancements (Schema)** reports for ongoing performance.

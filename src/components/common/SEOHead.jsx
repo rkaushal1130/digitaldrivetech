@@ -28,7 +28,10 @@ export default function SEOHead({
   twitterDescription = metaDescription,
   twitterImage = ogImage,
   lang = 'en-IN',
-  siteName = 'Digital Drive Resource Tech Private Limited'
+  siteName = 'Digital Drive Resource Tech Private Limited',
+  structuredData = null,
+  preloadImage = null,
+  preloadImageType = 'image/webp'
 } = {}) {
   useEffect(() => {
     // 1. Page / Document Title
@@ -58,6 +61,7 @@ export default function SEOHead({
     const originalDesc = descEl ? descEl.getAttribute('content') : null;
     setMetaTag('name', 'description', metaDescription);
     setMetaTag('name', 'robots', robots);
+    setMetaTag('name', 'googlebot', 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1');
 
     // 5. Open Graph
     setMetaTag('property', 'og:type', 'website');
@@ -88,6 +92,32 @@ export default function SEOHead({
     }
     canonical.setAttribute('href', pageUrl);
 
+    // 8. Structured Data (JSON-LD)
+    let schemaScript = null;
+    if (structuredData) {
+      schemaScript = document.createElement('script');
+      schemaScript.setAttribute('type', 'application/ld+json');
+      schemaScript.textContent =
+        typeof structuredData === 'string'
+          ? structuredData
+          : JSON.stringify(structuredData);
+      document.head.appendChild(schemaScript);
+    }
+
+    // 9. Preload Critical LCP Image
+    let preloadLink = null;
+    if (preloadImage) {
+      preloadLink = document.createElement('link');
+      preloadLink.setAttribute('rel', 'preload');
+      preloadLink.setAttribute('as', 'image');
+      preloadLink.setAttribute('href', preloadImage);
+      if (preloadImageType) {
+        preloadLink.setAttribute('type', preloadImageType);
+      }
+      preloadLink.setAttribute('fetchpriority', 'high');
+      document.head.appendChild(preloadLink);
+    }
+
     // Cleanup on unmount
     return () => {
       document.title = originalTitle;
@@ -108,6 +138,14 @@ export default function SEOHead({
       } else if (canonical && originalCanonicalHref) {
         canonical.setAttribute('href', originalCanonicalHref);
       }
+
+      if (schemaScript && schemaScript.parentNode) {
+        schemaScript.parentNode.removeChild(schemaScript);
+      }
+
+      if (preloadLink && preloadLink.parentNode) {
+        preloadLink.parentNode.removeChild(preloadLink);
+      }
     };
   }, [
     pageUrl,
@@ -124,7 +162,10 @@ export default function SEOHead({
     twitterDescription,
     twitterImage,
     lang,
-    siteName
+    siteName,
+    structuredData,
+    preloadImage,
+    preloadImageType
   ]);
 
   return null;

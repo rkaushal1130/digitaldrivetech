@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import './TechnologiesGrid.css';
 import html5Icon from '../../assets/icons/SVG ICONS/html-5.svg';
@@ -93,7 +94,11 @@ export default function TechnologiesGrid() {
         <h2 className="technologies-sec-title">Modern Technologies For Modern Solutions</h2>
         <p className="technologies-sec-sub">
           We work with a wide range of technologies and frameworks to deliver robust, scalable and
-          future-ready solutions.
+          future-ready solutions for{' '}
+          <Link to="/website-development" className="technologies-inline-link" title="Website Development Services">
+            website development
+          </Link>
+          , mobile applications and enterprise software.
         </p>
         <div className="technologies-tgrid">
           {technologiesData.map((tech) => (

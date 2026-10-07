@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Container from '../ui/Container';
 import SectionTitle from '../ui/SectionTitle';
 import services from '../../data/services';
@@ -23,7 +24,19 @@ export default function Services() {
                 <div className="service-icon">
                   {Icon ? <Icon size={24} /> : <i className={service.icon}></i>}
                 </div>
-                <h4>{service.title}</h4>
+                <h4>
+                  {service.path ? (
+                    <Link
+                      to={service.path}
+                      className="service-title-link"
+                      title={service.id === 1 ? 'Website Development Services' : `${service.title} Services`}
+                    >
+                      {service.title}
+                    </Link>
+                  ) : (
+                    service.title
+                  )}
+                </h4>
                 <p>{service.description}</p>
               </div>
             );

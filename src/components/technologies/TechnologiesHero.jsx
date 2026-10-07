@@ -12,7 +12,7 @@ export default function TechnologiesHero() {
         <div className="technologies-hero-inner">
           <div className="technologies-hero-text">
             <div className="technologies-eyebrow">OUR TECHNOLOGIES</div>
-            <h1>Powering Solutions <br></br>With The <span>Best Technologies</span></h1>
+            <h1>Technologies We <span>Use</span></h1>
             <p>
               We use modern, secure and scalable technologies to build high-performance digital solutions that
               drive business growth and deliver exceptional user experiences.

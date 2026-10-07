@@ -52,6 +52,10 @@
   margin-bottom: 18px;
 }
 
+.services-hero h1 span {
+  color: #3b82f6;
+}
+
 .services-hero p {
   color: #b9c5dc;
   max-width: 400px;

@@ -2,7 +2,7 @@ import React from 'react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import './PortfolioHero.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 //import heroImage from '../../assets/images/PortHeroImage.webp';
 export default function PortfolioHero() {
   const navigate = useNavigate();
@@ -12,9 +12,17 @@ export default function PortfolioHero() {
         <div className="portfolio-hero-inner">
           <div className="portfolio-hero-text">
             <div className="portfolio-eyebrow">OUR PORTFOLIO</div>
-            <h1>Projects That<br />Deliver <span>Results</span></h1>
+            <h1>Our Digital Projects &<br /><span>Work</span></h1>
             <p>
-              We create innovative websites, mobile applications and software solutions that help businesses grow
+              We create innovative{' '}
+              <Link
+                to="/website-development"
+                style={{ color: '#60a5fa', textDecoration: 'underline', textUnderlineOffset: '3px' }}
+                title="Website Development Services"
+              >
+                websites
+              </Link>
+              , mobile applications and software solutions that help businesses grow
               and succeed in the digital world.
             </p>
             <div className="portfolio-hero-btns">
