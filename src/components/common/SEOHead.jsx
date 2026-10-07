@@ -13,10 +13,10 @@ import { useEffect } from 'react';
  */
 
 export default function SEOHead({
-  pageUrl = 'https://www.digitaldrivetech.com/website-development',
-  pageTitle = 'Website Development Company in Mohali | Digital Drive Tech',
-  metaTitle = pageTitle,
-  metaDescription = 'Digital Drive is a trusted website development company in Mohali. We build fast, secure, SEO-friendly websites and e-commerce stores. Get a free quote today.',
+  pageUrl = 'https://www.digitaldrivetech.com/website-development-company-in-mohali',
+  pageTitle = 'Website Development company in Mohali',
+  metaTitle = 'Website Development company in Mohali | DigitalDriveTech',
+  metaDescription = 'Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a Website Development company in Mohali, offering result-driven services with transparent reporting to grow your business.',
   robots = 'index, follow, max-image-preview:large',
   ogTitle = metaTitle,
   ogDescription = metaDescription,

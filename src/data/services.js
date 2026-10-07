@@ -4,7 +4,7 @@ const services = [
     title: "Website Development",
     description: "We build modern, responsive and fast websites tailored to your business needs.",
     icon: "Monitor",
-    path: "/website-development"
+    path: "/website-development-company-in-mohali"
   },
   {
     id: 2,

@@ -44,7 +44,7 @@ export default function Footer() {
           <div>
             <h4>Services</h4>
             <ul>
-              <li style={{ cursor: 'pointer' }}><Link to="/website-development" className="footer-nav-link" onClick={() => window.scrollTo(0, 0)}>Website Development</Link></li>
+              <li style={{ cursor: 'pointer' }}><Link to="/website-development-company-in-mohali" className="footer-nav-link" onClick={() => window.scrollTo(0, 0)}>Website Development</Link></li>
               <li style={{ cursor: 'pointer' }}><Link to="/services/mobile-app-development" className="footer-nav-link" onClick={() => window.scrollTo(0, 0)}>Mobile App Development</Link></li>
               <li style={{ cursor: 'pointer' }}><Link to="/services/ui-ux-design" className="footer-nav-link" onClick={() => window.scrollTo(0, 0)}>UI/UX Design</Link></li>
               <li style={{ cursor: 'pointer' }}><Link to="/services/software-development" className="footer-nav-link" onClick={() => window.scrollTo(0, 0)}>Software Development</Link></li>

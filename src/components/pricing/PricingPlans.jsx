@@ -64,7 +64,7 @@ export default function PricingPlans() {
           <h2 className="section-title">Affordable Plans, Premium Results</h2>
           <p className="section-description">
             Transparent pricing for professional{' '}
-            <Link to="/website-development" className="pricing-inline-link" title="Website Development Services">
+            <Link to="/website-development-company-in-mohali" className="pricing-inline-link" title="Website Development Services">
               website development
             </Link>{' '}
             and digital solutions. No hidden charges.

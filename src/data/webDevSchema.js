@@ -89,18 +89,18 @@ export const webDevSchema = {
     // 3. WebPage
     {
       '@type': 'WebPage',
-      '@id': 'https://www.digitaldrivetech.com/website-development#webpage',
-      'url': 'https://www.digitaldrivetech.com/website-development',
-      'name': 'Website Development Company in Mohali | Website Development Services | DigitalDriveTech',
-      'description': 'Boost your online growth with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a leading website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications, and e-commerce stores tailored to your business goals.',
+      '@id': 'https://www.digitaldrivetech.com/website-development-company-in-mohali#webpage',
+      'url': 'https://www.digitaldrivetech.com/website-development-company-in-mohali',
+      'name': 'Website Development company in Mohali | DigitalDriveTech',
+      'description': 'Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a Website Development company in Mohali, offering result-driven services with transparent reporting to grow your business.',
       'isPartOf': {
         '@id': 'https://www.digitaldrivetech.com/#website'
       },
       'about': {
-        '@id': 'https://www.digitaldrivetech.com/website-development#service'
+        '@id': 'https://www.digitaldrivetech.com/website-development-company-in-mohali#service'
       },
       'breadcrumb': {
-        '@id': 'https://www.digitaldrivetech.com/website-development#breadcrumb'
+        '@id': 'https://www.digitaldrivetech.com/website-development-company-in-mohali#breadcrumb'
       },
       'inLanguage': 'en-IN'
     },
@@ -108,10 +108,10 @@ export const webDevSchema = {
     // 4. Service
     {
       '@type': 'Service',
-      '@id': 'https://www.digitaldrivetech.com/website-development#service',
+      '@id': 'https://www.digitaldrivetech.com/website-development-company-in-mohali#service',
       'name': 'Website Development Services',
       'serviceType': 'Website Development',
-      'url': 'https://www.digitaldrivetech.com/website-development',
+      'url': 'https://www.digitaldrivetech.com/website-development-company-in-mohali',
       'description': 'Professional website development services in Mohali, Chandigarh and Punjab including custom business websites, e-commerce stores, responsive web design, performance optimization and web applications.',
       'provider': {
         '@id': 'https://www.digitaldrivetech.com/#organization'
@@ -139,7 +139,7 @@ export const webDevSchema = {
     // 5. BreadcrumbList (Matches visible breadcrumbs in WebDevHero)
     {
       '@type': 'BreadcrumbList',
-      '@id': 'https://www.digitaldrivetech.com/website-development#breadcrumb',
+      '@id': 'https://www.digitaldrivetech.com/website-development-company-in-mohali#breadcrumb',
       'itemListElement': [
         {
           '@type': 'ListItem',
@@ -151,7 +151,7 @@ export const webDevSchema = {
           '@type': 'ListItem',
           'position': 2,
           'name': 'Website Development',
-          'item': 'https://www.digitaldrivetech.com/website-development'
+          'item': 'https://www.digitaldrivetech.com/website-development-company-in-mohali'
         }
       ]
     },
@@ -159,9 +159,9 @@ export const webDevSchema = {
     // 6. FAQPage (Matches visible FAQs in WebDevFAQ exactly)
     {
       '@type': 'FAQPage',
-      '@id': 'https://www.digitaldrivetech.com/website-development#faq',
+      '@id': 'https://www.digitaldrivetech.com/website-development-company-in-mohali#faq',
       'isPartOf': {
-        '@id': 'https://www.digitaldrivetech.com/website-development#webpage'
+        '@id': 'https://www.digitaldrivetech.com/website-development-company-in-mohali#webpage'
       },
       'mainEntity': [
         {

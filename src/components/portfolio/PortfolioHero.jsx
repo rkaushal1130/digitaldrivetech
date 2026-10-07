@@ -16,7 +16,7 @@ export default function PortfolioHero() {
             <p>
               We create innovative{' '}
               <Link
-                to="/website-development"
+                to="/website-development-company-in-mohali"
                 style={{ color: '#60a5fa', textDecoration: 'underline', textUnderlineOffset: '3px' }}
                 title="Website Development Services"
               >

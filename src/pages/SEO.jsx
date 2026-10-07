@@ -111,7 +111,7 @@ export default function SEO() {
         <>
           We improve the technical architecture of your website and{' '}
           <Link
-            to="/website-development"
+            to="/website-development-company-in-mohali"
             style={{ color: '#38bdf8', textDecoration: 'underline', textUnderlineOffset: '3px' }}
             title="Technical Website Development Services"
           >

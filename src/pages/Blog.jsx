@@ -80,7 +80,7 @@ export default function Blog() {
               {/* Service Pillar Link */}
               <div className="blog-pillar-note">
                 Looking for tailored development services? Explore our core{' '}
-                <Link to="/website-development" className="blog-pillar-link" title="Website Development Services in Mohali">
+                <Link to="/website-development-company-in-mohali" className="blog-pillar-link" title="Website Development Services in Mohali">
                   Website Development Services
                 </Link>{' '}
                 page for complete capabilities and project proof.

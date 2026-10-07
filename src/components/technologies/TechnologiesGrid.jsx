@@ -95,7 +95,7 @@ export default function TechnologiesGrid() {
         <p className="technologies-sec-sub">
           We work with a wide range of technologies and frameworks to deliver robust, scalable and
           future-ready solutions for{' '}
-          <Link to="/website-development" className="technologies-inline-link" title="Website Development Services">
+          <Link to="/website-development-company-in-mohali" className="technologies-inline-link" title="Website Development Services">
             website development
           </Link>
           , mobile applications and enterprise software.

@@ -20,7 +20,7 @@ export default function SoftDevAbout() {
       description: (
         <>
           Scalable, secure, and feature-rich web applications and{' '}
-          <Link to="/website-development" className="softdev-inline-link" title="Website Development Services">
+          <Link to="/website-development-company-in-mohali" className="softdev-inline-link" title="Website Development Services">
             website development
           </Link>{' '}
           using modern technologies.

@@ -53,7 +53,7 @@ export default function MobileDevAbout() {
                 <span className="mobiledev-about-eyebrow">ABOUT OUR MOBILE APP DEVELOPMENT SERVICES</span>
                 <p className="mobiledev-about-intro">
                   We build custom mobile applications that are fast, secure, scalable, and tailored to your business needs. Together with our{' '}
-                  <Link to="/website-development" className="mobiledev-inline-link" title="Website Development Services">
+                  <Link to="/website-development-company-in-mohali" className="mobiledev-inline-link" title="Website Development Services">
                     website development
                   </Link>{' '}
                   solutions, we turn your vision into a powerful digital experience from idea to launch.

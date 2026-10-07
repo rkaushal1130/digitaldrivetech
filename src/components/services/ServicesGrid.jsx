@@ -9,7 +9,7 @@ const servicesData = [
     id: 1,
     icon: 'Monitor',
     title: 'Website Development',
-    path: '/website-development',
+    path: '/website-development-company-in-mohali',
     titleAttr: 'Website Development Services',
     description: 'We build modern, responsive and SEO-friendly websites that help you build a strong online presence and grow your business.',
   },

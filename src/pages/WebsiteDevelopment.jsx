@@ -22,16 +22,16 @@ export default function WebsiteDevelopment() {
   return (
     <div className="website-development-page">
       <SEOHead
-        pageUrl="https://www.digitaldrivetech.com/website-development"
-        pageTitle="Website Development Services | Website Development Company in Mohali"
-        metaTitle="Website Development Company in Mohali | Website Development Services | DigitalDriveTech"
-        metaDescription="Boost your online growth with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a leading website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications, and e-commerce stores tailored to your business goals."
-        ogTitle="Website Development Company in Mohali | Website Development Services | DigitalDriveTech"
-        ogDescription="Boost your online growth with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a leading website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications, and e-commerce stores tailored to your business goals."
-        ogUrl="https://www.digitaldrivetech.com/website-development"
+        pageUrl="https://www.digitaldrivetech.com/website-development-company-in-mohali"
+        pageTitle="Website Development company in Mohali"
+        metaTitle="Website Development company in Mohali | DigitalDriveTech"
+        metaDescription="Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a Website Development company in Mohali, offering result-driven services with transparent reporting to grow your business."
+        ogTitle="Website Development company in Mohali | DigitalDriveTech"
+        ogDescription="Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a Website Development company in Mohali, offering result-driven services with transparent reporting to grow your business."
+        ogUrl="https://www.digitaldrivetech.com/website-development-company-in-mohali"
         ogImage="https://www.digitaldrivetech.com/images/website-development-og.jpg"
-        twitterTitle="Website Development Company in Mohali | Website Development Services | DigitalDriveTech"
-        twitterDescription="Boost your online growth with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a leading website development company in Mohali. We build fast, secure, SEO-friendly websites, custom web applications, and e-commerce stores tailored to your business goals."
+        twitterTitle="Website Development company in Mohali | DigitalDriveTech"
+        twitterDescription="Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a Website Development company in Mohali, offering result-driven services with transparent reporting to grow your business."
         twitterImage="https://www.digitaldrivetech.com/images/website-development-og.jpg"
         structuredData={webDevSchema}
         preloadImage={webDevHeroImg}

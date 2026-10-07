@@ -29,7 +29,7 @@ export default function PortfolioProjects() {
                 <div className="portfolio-tags">
                   {project.id === 5 || project.id === 2 ? (
                     <Link
-                      to="/website-development"
+                      to="/website-development-company-in-mohali"
                       className="portfolio-tag"
                       style={{ textDecoration: 'none' }}
                       title="Explore Website Development Services"

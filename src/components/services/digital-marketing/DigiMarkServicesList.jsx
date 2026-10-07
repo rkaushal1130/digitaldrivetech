@@ -52,7 +52,7 @@ export default function DigiMarkServicesList() {
           <p className="digimark-services-subtitle">
             At Digital Drive Resource Tech Private Limited (DigitalDriveTech), we provide digital marketing services designed to increase online visibility, reach the right audience, and support business growth through{' '}
             <Link
-              to="/website-development"
+              to="/website-development-company-in-mohali"
               style={{ color: '#38bdf8', textDecoration: 'underline', textUnderlineOffset: '3px' }}
               title="SEO-friendly Website Development Services"
             >

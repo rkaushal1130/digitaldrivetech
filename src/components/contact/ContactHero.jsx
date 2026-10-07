@@ -16,7 +16,7 @@ export default function ContactHero() {
             <p>
               Looking to discuss{' '}
               <Link
-                to="/website-development"
+                to="/website-development-company-in-mohali"
                 style={{ color: '#60a5fa', textDecoration: 'underline', textUnderlineOffset: '3px' }}
                 title="Website Development Services in Mohali"
               >

@@ -56,7 +56,7 @@ export default function UIUXAbout() {
       description: (
         <>
           We design modern, responsive and conversion-focused interfaces ready for seamless{' '}
-          <Link to="/website-development" className="uiux-inline-link" title="Website Development Services">
+          <Link to="/website-development-company-in-mohali" className="uiux-inline-link" title="Website Development Services">
             website development
           </Link>.
         </>

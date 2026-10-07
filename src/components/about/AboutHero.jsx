@@ -20,7 +20,7 @@ export default function AboutHero() {
             <p>
               Digital Drive Resource Tech Private Limited is a full-service digital company that helps businesses go online with powerful{' '}
               <Link
-                to="/website-development"
+                to="/website-development-company-in-mohali"
                 style={{ color: '#60a5fa', textDecoration: 'underline', textUnderlineOffset: '3px' }}
                 title="Website Development Company in Mohali"
               >

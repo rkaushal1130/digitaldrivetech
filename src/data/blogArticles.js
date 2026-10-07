@@ -1,7 +1,7 @@
 /**
  * Supporting Content Cluster for Website Development
  * Canonical Topic: Website Development
- * Target Money Page: https://www.digitaldrivetech.com/website-development
+ * Target Money Page: https://www.digitaldrivetech.com/website-development-company-in-mohali
  * Local Focus: Mohali, Chandigarh, Punjab, India
  */
 
@@ -77,7 +77,7 @@ export const blogArticles = [
       heading: 'Ready to Build a High-Performing Website?',
       text: 'Partner with Digital Drive to engineer a fast, secure, and conversion-focused web presence for your business.',
       buttonText: 'Explore Our Website Development Services',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['website-development-vs-website-design', 'website-development-process', 'website-development-cost-in-india']
   },
@@ -218,7 +218,7 @@ export const blogArticles = [
       heading: 'Need Seamless Design and Development Under One Roof?',
       text: 'Explore how Digital Drive bridges high-end UI/UX design with scalable engineering to deliver outstanding digital experiences.',
       buttonText: 'Learn About Our Website Development Services',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['what-is-website-development', 'how-to-choose-website-development-company', 'responsive-website-development']
   },
@@ -279,7 +279,7 @@ export const blogArticles = [
       heading: 'Looking for a Reliable Web Development Partner?',
       text: 'Discover our transparent engineering process and see how we help businesses grow with dependable digital solutions.',
       buttonText: 'Explore Our Website Development Services',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['website-development-cost-in-india', 'website-development-process', 'website-development-company-mohali']
   },
@@ -333,7 +333,7 @@ export const blogArticles = [
       heading: 'Make Your Website Fast and Flawless on Every Screen',
       text: 'We specialize in responsive website development that maximizes user retention and drives measurable inquiries across all devices.',
       buttonText: 'See Our Website Development Services',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['what-is-website-development', 'seo-friendly-website-development', 'business-website-development-features']
   },
@@ -389,7 +389,7 @@ export const blogArticles = [
       heading: 'Build an SEO-Ready Digital Foundation',
       text: 'Get in touch with Digital Drive to engineer a website that satisfies search engine algorithms and delights your prospective clients.',
       buttonText: 'Explore SEO-Friendly Website Development',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['responsive-website-development', 'what-is-website-development', 'business-website-development-features']
   },
@@ -448,7 +448,7 @@ export const blogArticles = [
       heading: 'Transform Your Business with a Professional Website',
       text: 'Partner with Digital Drive to develop an authoritative, secure, and conversion-ready platform tailored to your company goals.',
       buttonText: 'Discover Professional Website Development',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['what-is-website-development', 'website-development-cost-in-india', 'how-to-choose-website-development-company']
   },
@@ -501,7 +501,7 @@ export const blogArticles = [
       heading: 'Launch Your Scalable E-commerce Store',
       text: 'Explore Digital Drive’s custom e-commerce website development solutions designed for high conversion and secure order management.',
       buttonText: 'Explore E-Commerce Website Solutions',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['business-website-development-features', 'what-is-website-development', 'website-development-cost-in-india']
   },
@@ -550,7 +550,7 @@ export const blogArticles = [
       heading: 'Evaluate Your Website Architecture with Experts',
       text: 'Let our development team assess your current platform and recommend the most cost-effective path forward for your business.',
       buttonText: 'Learn About Website Development & Redesigns',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['what-is-website-development', 'website-development-cost-in-india', 'seo-friendly-website-development']
   },
@@ -615,7 +615,7 @@ export const blogArticles = [
       heading: 'Ready to Bring Your Digital Vision to Life?',
       text: 'Our structured website development process ensures your project is delivered on schedule, within budget, and built for growth.',
       buttonText: 'Learn More About Our Website Development Services',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['what-is-website-development', 'how-to-choose-website-development-company', 'website-development-cost-in-india']
   },
@@ -677,7 +677,7 @@ export const blogArticles = [
       heading: 'Partner with a Trusted Mohali Web Development Team',
       text: 'Schedule an in-person or virtual consultation with Digital Drive to discuss your website goals and receive tailored technical guidance.',
       buttonText: 'Explore Website Development Services in Mohali',
-      buttonLink: '/website-development'
+      buttonLink: '/website-development-company-in-mohali'
     },
     relatedSlugs: ['how-to-choose-website-development-company', 'what-is-website-development', 'website-development-cost-in-india']
   }
