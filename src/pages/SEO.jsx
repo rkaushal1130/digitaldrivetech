@@ -149,7 +149,7 @@ export default function SEO() {
     <div className="seo-page">
       <SEOHead
         pageUrl="https://www.digitaldrivetech.com/seo-company-in-mohali"
-        pageTitle="SEO Company in Mohali | SEO Services | DigitalDriveTech"
+        pageTitle="SEO Services | SEO Company in Mohali"
         metaTitle="SEO Company in Mohali | SEO Services | DigitalDriveTech"
         metaDescription="Boost your online visibility with Digital Drive Resource Tech Private Limited (DigitalDriveTech), a reliable SEO company in Mohali. Get SEO strategies tailored to your business goals."
         ogTitle="SEO Company in Mohali | SEO Services | DigitalDriveTech"

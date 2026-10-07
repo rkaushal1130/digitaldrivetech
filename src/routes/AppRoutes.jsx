@@ -38,12 +38,13 @@ export default function AppRoutes() {
       <Route path="/software-development" element={<SoftwareDevelopment />} />
       <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
       <Route path="/digital-marketing" element={<DigitalMarketing />} />
-      <Route path="/services/seo" element={<SEO />} />
-      <Route path="/seo" element={<SEO />} />
+      <Route path="/services/seo" element={<Navigate to="/seo-company-in-mohali" replace />} />
+      <Route path="/seo" element={<Navigate to="/seo-company-in-mohali" replace />} />
       <Route path="/seo-company-in-mohali" element={<SEO />} />
-      <Route path="/services/social-media-marketing" element={<SocialMediaMarketing />} />
-      <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
-      <Route path="/services/smm" element={<SocialMediaMarketing />} />
+      <Route path="/services/social-media-marketing" element={<Navigate to="/social-media-marketing-company-in-mohali" replace />} />
+      <Route path="/social-media-marketing" element={<Navigate to="/social-media-marketing-company-in-mohali" replace />} />
+      <Route path="/services/smm" element={<Navigate to="/social-media-marketing-company-in-mohali" replace />} />
+      <Route path="/social-media-marketing-company-in-mohali" element={<SocialMediaMarketing />} />
       <Route path="/portfolio" element={<PortfolioPage />} />
       <Route path="/technologies" element={<Technologies />} />
       <Route path="/pricing" element={<Pricing />} />

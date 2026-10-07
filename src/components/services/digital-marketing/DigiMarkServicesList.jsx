@@ -12,7 +12,7 @@ const servicesData = [
     title: 'SEO (Search Engine Optimization)',
     description: 'Improve search rankings, organic traffic, and online visibility.',
     icon: <Search size={26} />,
-    path: '/services/seo',
+    path: '/seo-company-in-mohali',
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const servicesData = [
     title: 'SMM (Social Media Marketing)',
     description: 'Build brand awareness and engage your target audience.',
     icon: <Share2 size={26} />,
-    path: '/services/social-media-marketing',
+    path: '/social-media-marketing-company-in-mohali',
   },
   {
     id: 4,

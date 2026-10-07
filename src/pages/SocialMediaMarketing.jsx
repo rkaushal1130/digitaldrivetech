@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import SEOHead from '../components/common/SEOHead';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 import {
@@ -87,6 +88,17 @@ export default function SocialMediaMarketing() {
 
   return (
     <div className="smm-page">
+      <SEOHead
+        pageUrl="https://www.digitaldrivetech.com/social-media-marketing-company-in-mohali"
+        pageTitle="Social Media Marketing Company in Mohali"
+        metaTitle="Social media marketing Company in Mohali | DigitalDriveTech"
+        metaDescription="Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a social media marketing company in Mohali offering social media strategies, engaging content, and audience-focused campaigns to help businesses grow online."
+        ogTitle="Social media marketing Company in Mohali | DigitalDriveTech"
+        ogDescription="Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a social media marketing company in Mohali offering social media strategies, engaging content, and audience-focused campaigns to help businesses grow online."
+        ogUrl="https://www.digitaldrivetech.com/social-media-marketing-company-in-mohali"
+        twitterTitle="Social media marketing Company in Mohali | DigitalDriveTech"
+        twitterDescription="Digital Drive Resource Tech Private Limited (DigitalDriveTech) is a social media marketing company in Mohali offering social media strategies, engaging content, and audience-focused campaigns to help businesses grow online."
+      />
       {/* HERO SECTION */}
       <section className="smm-hero">
         <div className="smm-hero-glow"></div>
@@ -99,7 +111,7 @@ export default function SocialMediaMarketing() {
               </div>
 
               <h1 className="smm-main-title">
-                SOCIAL MEDIA <span>MARKETING</span>
+                Social Media Marketing <span>Company in Mohali</span>
               </h1>
 
               <p className="smm-tagline">
