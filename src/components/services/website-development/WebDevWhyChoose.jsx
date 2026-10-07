@@ -43,7 +43,7 @@ export default function WebDevWhyChoose() {
       description: (
         <>
           We integrate clean semantic HTML, structured metadata and{' '}
-          <Link to="/digital-marketing" title="Digital Marketing & SEO Services" className="webdev-why-inline-link">
+          <Link to="/digital-marketing-company-in-mohali" title="Digital Marketing & SEO Services" className="webdev-why-inline-link">
             SEO fundamentals
           </Link>{' '}
           so search engines can easily discover and index your content.

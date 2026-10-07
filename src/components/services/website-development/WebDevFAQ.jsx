@@ -33,7 +33,7 @@ const faqData = [
     answer: (
       <>
         Yes. Every website we build features responsive website development that adapts seamlessly across mobile, tablet and desktop devices. We also implement an SEO-ready technical foundation, including clean code, semantic structure, fast page speeds and{' '}
-        <Link to="/digital-marketing" className="webdev-faq-inline-link" title="Digital Marketing & SEO Services">
+        <Link to="/digital-marketing-company-in-mohali" className="webdev-faq-inline-link" title="Digital Marketing & SEO Services">
           on-page SEO
         </Link>{' '}
         fundamentals to support search engine visibility.

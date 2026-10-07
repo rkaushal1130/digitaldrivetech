@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import { Monitor, Code2, TrendingUp, ShieldCheck } from 'lucide-react';
-import logoImage from '../../../assets/icons/logo.png';
+import webDevTechBannerImg from '../../../assets/images/services-new-addons/web-dev-tech-banner.png';
 import './WebDevAbout.css';
 
 export default function WebDevAbout() {
@@ -29,7 +29,7 @@ export default function WebDevAbout() {
         <>
           Clean implementation, optimized assets and{' '}
           <Link
-            to="/digital-marketing"
+            to="/digital-marketing-company-in-mohali"
             title="Digital Marketing and SEO Services"
             className="webdev-about-inline-link"
           >
@@ -54,20 +54,16 @@ export default function WebDevAbout() {
         <div className="webdev-about-card">
           <div className="webdev-about-grid">
             <div className="webdev-about-brand-col">
-              <div className="webdev-about-logo-wrapper">
+              <div className="webdev-about-image-wrapper">
                 <img
-                  src={logoImage}
-                  alt="Digital Drive Resource Tech Private Limited logo"
-                  className="webdev-about-logo"
-                  width="64"
-                  height="64"
+                  src={webDevTechBannerImg}
+                  alt="Website Development ideas in motion, modern features and architecture"
+                  className="webdev-about-illustration"
+                  width="600"
+                  height="600"
                   loading="lazy"
                   decoding="async"
                 />
-                <div className="webdev-about-company-name">DIGITAL DRIVE</div>
-                <span className="webdev-about-company-sub">RESOURCE TECH PRIVATE LIMITED</span>
-                <div className="webdev-about-divider"></div>
-                <p className="webdev-about-slogan">Driving Digital Innovation</p>
               </div>
             </div>
 

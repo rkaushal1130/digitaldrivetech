@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Container from '../../ui/Container';
 import Button from '../../ui/Button';
 import { MapPin, Award, FileCheck, Handshake, Globe2, ArrowRight } from 'lucide-react';
@@ -53,6 +53,21 @@ export default function DigiMarkHero() {
     <section className="digimark-hero">
       <div className="digimark-hero-bg-glow"></div>
       <Container>
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="digimark-breadcrumb">
+          <ol>
+            <li>
+              <Link to="/" title="Home">Home</Link>
+            </li>
+            <li className="breadcrumb-separator" aria-hidden="true">/</li>
+            <li>
+              <Link to="/services" title="Services">Services</Link>
+            </li>
+            <li className="breadcrumb-separator" aria-hidden="true">/</li>
+            <li aria-current="page">Digital Marketing Company in Mohali</li>
+          </ol>
+        </nav>
+
         <div className="digimark-hero-grid">
           <div className="digimark-hero-content">
             <div className="digimark-keyword-badge">
@@ -61,7 +76,7 @@ export default function DigiMarkHero() {
             </div>
 
             <h1 className="digimark-main-title">
-              DIGITAL <span>MARKETING</span>
+              Digital Marketing <span>Company in Mohali</span>
             </h1>
 
             <div className="digimark-description">

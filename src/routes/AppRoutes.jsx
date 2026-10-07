@@ -38,8 +38,10 @@ export default function AppRoutes() {
       <Route path="/ui-ux-design" element={<UIUXDesign />} />
       <Route path="/services/software-development" element={<SoftwareDevelopment />} />
       <Route path="/software-development" element={<SoftwareDevelopment />} />
-      <Route path="/services/digital-marketing" element={<DigitalMarketing />} />
-      <Route path="/digital-marketing" element={<DigitalMarketing />} />
+      <Route path="/services/digital-marketing" element={<Navigate to="/digital-marketing-company-in-mohali" replace />} />
+      <Route path="/digital-marketing" element={<Navigate to="/digital-marketing-company-in-mohali" replace />} />
+      <Route path="/digital-marketing-services-in-mohali" element={<Navigate to="/digital-marketing-company-in-mohali" replace />} />
+      <Route path="/digital-marketing-company-in-mohali" element={<DigitalMarketing />} />
       <Route path="/services/seo" element={<Navigate to="/seo-company-in-mohali" replace />} />
       <Route path="/seo" element={<Navigate to="/seo-company-in-mohali" replace />} />
       <Route path="/seo-company-in-mohali" element={<SEO />} />

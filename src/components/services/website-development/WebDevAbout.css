@@ -5,70 +5,49 @@
 .webdev-about-card {
   background: #ffffff;
   border-radius: 24px;
-  padding: 48px;
+  padding: 0;
   color: #0f172a;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
 }
 
 .webdev-about-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.6fr;
-  gap: 48px;
-  align-items: center;
+  grid-template-columns: 1fr 1.3fr;
+  align-items: stretch;
 }
 
 .webdev-about-brand-col {
   display: flex;
+  align-items: stretch;
   justify-content: center;
-  align-items: center;
-  border-right: 2px solid #e2e8f0;
-  padding-right: 40px;
+  background: #040816;
+  position: relative;
+  overflow: hidden;
+  border-right: 1px solid #e2e8f0;
 }
 
-.webdev-about-logo-wrapper {
-  text-align: center;
+.webdev-about-image-wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+}
+
+.webdev-about-illustration {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+.webdev-about-content-col {
+  padding: 48px 48px 48px 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.webdev-about-logo {
-  height: 90px;
-  width: auto;
-  aspect-ratio: 1 / 1;
-  margin-bottom: 16px;
-  object-fit: contain;
-}
-
-.webdev-about-company-name {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: #1e3a8a;
-  letter-spacing: 1px;
-  line-height: 1.1;
-  margin-bottom: 2px;
-}
-
-.webdev-about-company-sub {
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: #1e293b;
-  letter-spacing: 0.5px;
-  margin-bottom: 12px;
-}
-
-.webdev-about-divider {
-  width: 140px;
-  height: 2px;
-  background: #2563eb;
-  margin: 8px 0;
-}
-
-.webdev-about-slogan {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #2563eb;
-  font-style: italic;
+  justify-content: center;
 }
 
 .webdev-about-eyebrow {
@@ -145,20 +124,35 @@
 @media (max-width: 992px) {
   .webdev-about-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 0;
   }
 
   .webdev-about-brand-col {
     border-right: none;
-    border-bottom: 2px solid #e2e8f0;
-    padding-right: 0;
-    padding-bottom: 32px;
+    border-bottom: 1px solid #e2e8f0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .webdev-about-illustration {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .webdev-about-content-col {
+    padding: 36px 28px;
   }
 }
 
 @media (max-width: 640px) {
-  .webdev-about-card {
-    padding: 28px 20px;
+  .webdev-about-illustration {
+    height: 360px;
+  }
+
+  .webdev-about-content-col {
+    padding: 28px 18px;
   }
 
   .webdev-about-features-grid {

@@ -34,7 +34,7 @@ const LINK_RULES = [
   { phrase: 'UI/UX design', to: '/ui-ux-design', title: 'UI/UX Design Services' },
   { phrase: 'custom web applications', to: '/software-development', title: 'Custom Web Applications' },
   { phrase: 'custom web application', to: '/software-development', title: 'Custom Web Applications' },
-  { phrase: 'technical SEO', to: '/digital-marketing', title: 'Digital Marketing & Technical SEO' },
+  { phrase: 'technical SEO', to: '/digital-marketing-company-in-mohali', title: 'Digital Marketing & Technical SEO' },
 ];
 
 function formatTextWithLinks(text) {

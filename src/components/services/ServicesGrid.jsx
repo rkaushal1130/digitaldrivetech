@@ -38,7 +38,7 @@ const servicesData = [
     id: 5,
     icon: 'Megaphone',
     title: 'Digital Marketing',
-    path: '/services/digital-marketing',
+    path: '/digital-marketing-company-in-mohali',
     description: 'From SEO to Social Media, we help you increase visibility, generate leads and grow your brand online.',
   },
   {

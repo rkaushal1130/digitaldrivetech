@@ -32,7 +32,7 @@ const services = [
     title: "Digital Marketing",
     description: "We help you grow your brand, reach more customers and boost your online presence.",
     icon: "Megaphone",
-    path: "/digital-marketing"
+    path: "/digital-marketing-company-in-mohali"
   }
 ];
 
