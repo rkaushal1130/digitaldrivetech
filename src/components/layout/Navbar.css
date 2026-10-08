@@ -243,6 +243,44 @@ nav.navbar {
     pointer-events: auto;
 }
 
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #25D366;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff !important;
+    padding: 10px 22px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    border: none;
+    cursor: pointer;
+}
+
+.whatsapp-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
+    color: #ffffff !important;
+    filter: brightness(1.05);
+}
+
+.whatsapp-btn:active {
+    transform: translateY(0);
+}
+
+.whatsapp-btn .whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
 .mobile-backdrop {
     position: fixed;
     top: 0;
@@ -268,9 +306,14 @@ nav.navbar {
         display: flex;
     }
 
-    .desktop-cta {
+    .desktop-cta,
+    .desktop-whatsapp {
         display: inline-flex;
         margin-right: 12px;
+    }
+
+    .mobile-whatsapp {
+        display: none !important;
     }
 
     .hamburger-menu {
@@ -287,8 +330,16 @@ nav.navbar {
         display: none;
     }
 
-    .desktop-cta {
-        display: none;
+    .desktop-cta,
+    .desktop-whatsapp {
+        display: none !important;
+    }
+
+    .mobile-whatsapp {
+        width: 100%;
+        display: inline-flex;
+        padding: 14px 20px;
+        box-sizing: border-box;
     }
 
     .hamburger-menu {
